@@ -1,0 +1,6 @@
+# Xcode
+xcuserdata
+/DerivedData
+
+# Mac OS
+.DS_Store
