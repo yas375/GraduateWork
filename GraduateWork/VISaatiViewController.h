@@ -1,5 +1,5 @@
 //
-//  VIDetailViewController.h
+//  VISaatiViewController.h
 //  GraduateWork
 //
 //  Created by Victor Ilyukevich on 02.02.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VIDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface VISaatiViewController : UIViewController
 
 @end

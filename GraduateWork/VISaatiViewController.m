@@ -1,13 +1,17 @@
 //
-//  VIDetailViewController.h
+//  VISaatiViewController.m
 //  GraduateWork
 //
 //  Created by Victor Ilyukevich on 02.02.13.
 //  Copyright (c) 2013 Victor Ilyukevich. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "VISaatiViewController.h"
 
-@interface VIDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface VISaatiViewController ()
+
+@end
+
+@implementation VISaatiViewController
 
 @end

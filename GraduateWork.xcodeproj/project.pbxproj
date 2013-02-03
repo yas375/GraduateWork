@@ -24,6 +24,7 @@
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
 		5023D35A16BCFBAB007699AA /* GraduateWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D35916BCFBAB007699AA /* GraduateWorkTests.m */; };
+		5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D36416BD0031007699AA /* VISaatiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		5023D35616BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5023D35816BCFBAB007699AA /* GraduateWorkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraduateWorkTests.h; sourceTree = "<group>"; };
 		5023D35916BCFBAB007699AA /* GraduateWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraduateWorkTests.m; sourceTree = "<group>"; };
+		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
+		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				5023D34316BCFBAB007699AA /* VIDetailViewController.h */,
 				5023D34416BCFBAB007699AA /* VIDetailViewController.m */,
 				5023D32C16BCFBAB007699AA /* Supporting Files */,
+				5023D36316BD0030007699AA /* VISaatiViewController.h */,
+				5023D36416BD0031007699AA /* VISaatiViewController.m */,
 			);
 			path = GraduateWork;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				5023D33616BCFBAB007699AA /* VIAppDelegate.m in Sources */,
 				5023D34216BCFBAB007699AA /* VIMasterViewController.m in Sources */,
 				5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */,
+				5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
