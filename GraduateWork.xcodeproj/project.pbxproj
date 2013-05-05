@@ -25,6 +25,7 @@
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
 		5023D35A16BCFBAB007699AA /* GraduateWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D35916BCFBAB007699AA /* GraduateWorkTests.m */; };
 		5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D36416BD0031007699AA /* VISaatiViewController.m */; };
+		FDCBDC04E0F54C449435E3B5 /* libPods-GraduateWorkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraduateWorkTests.xcconfig"; path = "Pods/Pods-GraduateWorkTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		5023D32216BCFBAB007699AA /* GraduateWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraduateWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D32516BCFBAB007699AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5023D32716BCFBAB007699AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,7 @@
 		5023D35916BCFBAB007699AA /* GraduateWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraduateWorkTests.m; sourceTree = "<group>"; };
 		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
 		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
+		51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraduateWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 				5023D34D16BCFBAB007699AA /* SenTestingKit.framework in Frameworks */,
 				5023D34E16BCFBAB007699AA /* UIKit.framework in Frameworks */,
 				5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */,
+				FDCBDC04E0F54C449435E3B5 /* libPods-GraduateWorkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 				5023D35216BCFBAB007699AA /* GraduateWorkTests */,
 				5023D32416BCFBAB007699AA /* Frameworks */,
 				5023D32316BCFBAB007699AA /* Products */,
+				2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +121,7 @@
 				5023D32716BCFBAB007699AA /* Foundation.framework */,
 				5023D32916BCFBAB007699AA /* CoreGraphics.framework */,
 				5023D34C16BCFBAB007699AA /* SenTestingKit.framework */,
+				51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,10 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5023D36016BCFBAB007699AA /* Build configuration list for PBXNativeTarget "GraduateWorkTests" */;
 			buildPhases = (
+				A5FA4C5546954668AA54389C /* Check Pods Manifest.lock */,
 				5023D34616BCFBAB007699AA /* Sources */,
 				5023D34716BCFBAB007699AA /* Frameworks */,
 				5023D34816BCFBAB007699AA /* Resources */,
 				5023D34916BCFBAB007699AA /* ShellScript */,
+				028576186A4A4C099CC488EF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +269,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		028576186A4A4C099CC488EF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-GraduateWorkTests-resources.sh\"\n";
+		};
 		5023D34916BCFBAB007699AA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +295,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A5FA4C5546954668AA54389C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -417,12 +453,9 @@
 		};
 		5023D36116BCFBAB007699AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GraduateWork.app/GraduateWork";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraduateWork/GraduateWork-Prefix.pch";
 				INFOPLIST_FILE = "GraduateWorkTests/GraduateWorkTests-Info.plist";
@@ -434,12 +467,9 @@
 		};
 		5023D36216BCFBAB007699AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GraduateWork.app/GraduateWork";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraduateWork/GraduateWork-Prefix.pch";
 				INFOPLIST_FILE = "GraduateWorkTests/GraduateWorkTests-Info.plist";
@@ -468,6 +498,7 @@
 				5023D35F16BCFBAB007699AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5023D36016BCFBAB007699AA /* Build configuration list for PBXNativeTarget "GraduateWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +507,7 @@
 				5023D36216BCFBAB007699AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
