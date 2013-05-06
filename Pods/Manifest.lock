@@ -1,10 +1,16 @@
 PODS:
+  - BlocksKit (1.8.2):
+    - libffi
   - Kiwi (2.0.6)
+  - libffi (3.0.11)
 
 DEPENDENCIES:
+  - BlocksKit
   - Kiwi
 
 SPEC CHECKSUMS:
+  BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
 
 COCOAPODS: 0.19.1

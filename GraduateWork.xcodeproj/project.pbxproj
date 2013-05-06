@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052664862D16482DBF816539 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC83B556A73457DA23F5E31 /* libPods.a */; settings = {}; };
 		5023D32616BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D32816BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D32A16BCFBAB007699AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32916BCFBAB007699AA /* CoreGraphics.framework */; };
@@ -67,6 +68,8 @@
 		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
 		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
 		51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraduateWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC83B556A73457DA23F5E31 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPods.a; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7629F92201ED4B2789E0B704 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 				5023D32616BCFBAB007699AA /* UIKit.framework in Frameworks */,
 				5023D32816BCFBAB007699AA /* Foundation.framework in Frameworks */,
 				5023D32A16BCFBAB007699AA /* CoreGraphics.framework in Frameworks */,
+				052664862D16482DBF816539 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				5023D32416BCFBAB007699AA /* Frameworks */,
 				5023D32316BCFBAB007699AA /* Products */,
 				2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */,
+				7629F92201ED4B2789E0B704 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +127,7 @@
 				5023D32916BCFBAB007699AA /* CoreGraphics.framework */,
 				5023D34C16BCFBAB007699AA /* SenTestingKit.framework */,
 				51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */,
+				6BC83B556A73457DA23F5E31 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5023D35D16BCFBAB007699AA /* Build configuration list for PBXNativeTarget "GraduateWork" */;
 			buildPhases = (
+				596EA7F4161D415B9E97B87C /* Check Pods Manifest.lock */,
 				5023D31E16BCFBAB007699AA /* Sources */,
 				5023D31F16BCFBAB007699AA /* Frameworks */,
 				5023D32016BCFBAB007699AA /* Resources */,
+				F59412C04CFD4C08AA0899F3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +245,8 @@
 			mainGroup = 5023D31916BCFBAB007699AA;
 			productRefGroup = 5023D32316BCFBAB007699AA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				5023D32116BCFBAB007699AA /* GraduateWork */,
@@ -296,6 +306,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		596EA7F4161D415B9E97B87C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 1;
+		};
 		A5FA4C5546954668AA54389C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +334,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		F59412C04CFD4C08AA0899F3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -431,6 +471,7 @@
 		};
 		5023D35E16BCFBAB007699AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7629F92201ED4B2789E0B704 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraduateWork/GraduateWork-Prefix.pch";
@@ -442,6 +483,7 @@
 		};
 		5023D35F16BCFBAB007699AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7629F92201ED4B2789E0B704 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraduateWork/GraduateWork-Prefix.pch";
