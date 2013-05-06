@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		052664862D16482DBF816539 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC83B556A73457DA23F5E31 /* libPods.a */; settings = {}; };
+		1D26B190D18BDCB0A736950E /* MatrixSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26B341218B105AADE7A33A /* MatrixSpec.m */; };
+		1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26B993F681259AEDB4D615 /* Matrix.m */; };
+		1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */; };
 		5023D32616BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D32816BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D32A16BCFBAB007699AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32916BCFBAB007699AA /* CoreGraphics.framework */; };
@@ -24,7 +27,6 @@
 		5023D34E16BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
-		5023D35A16BCFBAB007699AA /* GraduateWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D35916BCFBAB007699AA /* GraduateWorkTests.m */; };
 		5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D36416BD0031007699AA /* VISaatiViewController.m */; };
 		FDCBDC04E0F54C449435E3B5 /* libPods-GraduateWorkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D26B00402C953A21345236C /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		1D26B341218B105AADE7A33A /* MatrixSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixSpec.m; sourceTree = "<group>"; };
+		1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiMatrix.h; sourceTree = "<group>"; };
+		1D26B993F681259AEDB4D615 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
+		1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiMatrix.m; sourceTree = "<group>"; };
 		2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraduateWorkTests.xcconfig"; path = "Pods/Pods-GraduateWorkTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		5023D32216BCFBAB007699AA /* GraduateWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraduateWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D32516BCFBAB007699AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -63,8 +70,6 @@
 		5023D34C16BCFBAB007699AA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5023D35416BCFBAB007699AA /* GraduateWorkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraduateWorkTests-Info.plist"; sourceTree = "<group>"; };
 		5023D35616BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5023D35816BCFBAB007699AA /* GraduateWorkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraduateWorkTests.h; sourceTree = "<group>"; };
-		5023D35916BCFBAB007699AA /* GraduateWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraduateWorkTests.m; sourceTree = "<group>"; };
 		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
 		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
 		51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraduateWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +103,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D26B1130246BD565260D7C0 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D26B37F958D97FEA89F757F /* Saati */,
+				1D26B00402C953A21345236C /* Matrix.h */,
+				1D26B993F681259AEDB4D615 /* Matrix.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		1D26B37F958D97FEA89F757F /* Saati */ = {
+			isa = PBXGroup;
+			children = (
+				1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */,
+				1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */,
+			);
+			path = Saati;
+			sourceTree = "<group>";
+		};
+		1D26B513EF161C5A2EDE1901 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D26B341218B105AADE7A33A /* MatrixSpec.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		5023D31916BCFBAB007699AA = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +177,7 @@
 				5023D32C16BCFBAB007699AA /* Supporting Files */,
 				5023D36316BD0030007699AA /* VISaatiViewController.h */,
 				5023D36416BD0031007699AA /* VISaatiViewController.m */,
+				1D26B1130246BD565260D7C0 /* Logic */,
 			);
 			path = GraduateWork;
 			sourceTree = "<group>";
@@ -166,9 +199,8 @@
 		5023D35216BCFBAB007699AA /* GraduateWorkTests */ = {
 			isa = PBXGroup;
 			children = (
-				5023D35816BCFBAB007699AA /* GraduateWorkTests.h */,
-				5023D35916BCFBAB007699AA /* GraduateWorkTests.m */,
 				5023D35316BCFBAB007699AA /* Supporting Files */,
+				1D26B513EF161C5A2EDE1901 /* Logic */,
 			);
 			path = GraduateWorkTests;
 			sourceTree = "<group>";
@@ -362,6 +394,8 @@
 				5023D34216BCFBAB007699AA /* VIMasterViewController.m in Sources */,
 				5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */,
 				5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */,
+				1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */,
+				1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5023D35A16BCFBAB007699AA /* GraduateWorkTests.m in Sources */,
+				1D26B190D18BDCB0A736950E /* MatrixSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
