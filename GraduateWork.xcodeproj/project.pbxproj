@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		052664862D16482DBF816539 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC83B556A73457DA23F5E31 /* libPods.a */; settings = {}; };
+		052664862D16482DBF816539 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC83B556A73457DA23F5E31 /* libPods.a */; };
 		1D26B190D18BDCB0A736950E /* MatrixSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26B341218B105AADE7A33A /* MatrixSpec.m */; };
+		1D26B25B165581DF5305507A /* FractionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */; };
 		1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26B993F681259AEDB4D615 /* Matrix.m */; };
+		1D26BB4D7FE01A579AA94B6C /* SaatiMatrixSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26BE70F38447E2A0DC666A /* SaatiMatrixSpec.m */; };
+		1D26BCCF1E3B8C15C5A646E2 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26BE80CA4B1869FBC10E00 /* Fraction.m */; };
 		1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */; };
+		501F670B1742842E00FE8903 /* DroppableAlternativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F670A1742842E00FE8903 /* DroppableAlternativeView.m */; };
+		501F670E1742845F00FE8903 /* Alternative.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F670D1742845F00FE8903 /* Alternative.m */; };
+		501F671017428F7E00FE8903 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F670F17428F7E00FE8903 /* QuartzCore.framework */; };
 		5023D32616BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D32816BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D32A16BCFBAB007699AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32916BCFBAB007699AA /* CoreGraphics.framework */; };
@@ -28,6 +34,7 @@
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
 		5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D36416BD0031007699AA /* VISaatiViewController.m */; };
+		5063E96E17428106003F62BB /* SaatiRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5063E96D17428106003F62BB /* SaatiRankViewController.m */; };
 		FDCBDC04E0F54C449435E3B5 /* libPods-GraduateWorkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +54,16 @@
 		1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiMatrix.h; sourceTree = "<group>"; };
 		1D26B993F681259AEDB4D615 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiMatrix.m; sourceTree = "<group>"; };
+		1D26BE70F38447E2A0DC666A /* SaatiMatrixSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiMatrixSpec.m; sourceTree = "<group>"; };
+		1D26BE80CA4B1869FBC10E00 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		1D26BF26E36C3F48230386FF /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FractionSpec.m; sourceTree = "<group>"; };
 		2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraduateWorkTests.xcconfig"; path = "Pods/Pods-GraduateWorkTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		501F67091742842E00FE8903 /* DroppableAlternativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DroppableAlternativeView.h; sourceTree = "<group>"; };
+		501F670A1742842E00FE8903 /* DroppableAlternativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DroppableAlternativeView.m; sourceTree = "<group>"; };
+		501F670C1742845F00FE8903 /* Alternative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alternative.h; sourceTree = "<group>"; };
+		501F670D1742845F00FE8903 /* Alternative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alternative.m; sourceTree = "<group>"; };
+		501F670F17428F7E00FE8903 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5023D32216BCFBAB007699AA /* GraduateWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraduateWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D32516BCFBAB007699AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5023D32716BCFBAB007699AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,8 +88,10 @@
 		5023D35616BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
 		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
+		5063E96C17428106003F62BB /* SaatiRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiRankViewController.h; sourceTree = "<group>"; };
+		5063E96D17428106003F62BB /* SaatiRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiRankViewController.m; sourceTree = "<group>"; };
 		51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraduateWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC83B556A73457DA23F5E31 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPods.a; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC83B556A73457DA23F5E31 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7629F92201ED4B2789E0B704 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -82,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501F671017428F7E00FE8903 /* QuartzCore.framework in Frameworks */,
 				5023D32616BCFBAB007699AA /* UIKit.framework in Frameworks */,
 				5023D32816BCFBAB007699AA /* Foundation.framework in Frameworks */,
 				5023D32A16BCFBAB007699AA /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +132,14 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		1D26B2C3DB47AA63EC05383A /* Saati */ = {
+			isa = PBXGroup;
+			children = (
+				1D26BE70F38447E2A0DC666A /* SaatiMatrixSpec.m */,
+			);
+			path = Saati;
+			sourceTree = "<group>";
+		};
 		1D26B37F958D97FEA89F757F /* Saati */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				1D26B341218B105AADE7A33A /* MatrixSpec.m */,
+				1D26B2C3DB47AA63EC05383A /* Saati */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -154,12 +182,13 @@
 		5023D32416BCFBAB007699AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5023D32516BCFBAB007699AA /* UIKit.framework */,
-				5023D32716BCFBAB007699AA /* Foundation.framework */,
 				5023D32916BCFBAB007699AA /* CoreGraphics.framework */,
-				5023D34C16BCFBAB007699AA /* SenTestingKit.framework */,
+				5023D32716BCFBAB007699AA /* Foundation.framework */,
 				51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */,
 				6BC83B556A73457DA23F5E31 /* libPods.a */,
+				501F670F17428F7E00FE8903 /* QuartzCore.framework */,
+				5023D34C16BCFBAB007699AA /* SenTestingKit.framework */,
+				5023D32516BCFBAB007699AA /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +207,14 @@
 				5023D36316BD0030007699AA /* VISaatiViewController.h */,
 				5023D36416BD0031007699AA /* VISaatiViewController.m */,
 				1D26B1130246BD565260D7C0 /* Logic */,
+				1D26BF26E36C3F48230386FF /* Fraction.h */,
+				1D26BE80CA4B1869FBC10E00 /* Fraction.m */,
+				5063E96C17428106003F62BB /* SaatiRankViewController.h */,
+				5063E96D17428106003F62BB /* SaatiRankViewController.m */,
+				501F67091742842E00FE8903 /* DroppableAlternativeView.h */,
+				501F670A1742842E00FE8903 /* DroppableAlternativeView.m */,
+				501F670C1742845F00FE8903 /* Alternative.h */,
+				501F670D1742845F00FE8903 /* Alternative.m */,
 			);
 			path = GraduateWork;
 			sourceTree = "<group>";
@@ -201,6 +238,7 @@
 			children = (
 				5023D35316BCFBAB007699AA /* Supporting Files */,
 				1D26B513EF161C5A2EDE1901 /* Logic */,
+				1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */,
 			);
 			path = GraduateWorkTests;
 			sourceTree = "<group>";
@@ -277,8 +315,6 @@
 			mainGroup = 5023D31916BCFBAB007699AA;
 			productRefGroup = 5023D32316BCFBAB007699AA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				5023D32116BCFBAB007699AA /* GraduateWork */,
@@ -351,7 +387,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 1;
 		};
 		A5FA4C5546954668AA54389C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -380,7 +415,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -396,6 +430,10 @@
 				5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */,
 				1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */,
 				1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */,
+				1D26BCCF1E3B8C15C5A646E2 /* Fraction.m in Sources */,
+				5063E96E17428106003F62BB /* SaatiRankViewController.m in Sources */,
+				501F670B1742842E00FE8903 /* DroppableAlternativeView.m in Sources */,
+				501F670E1742845F00FE8903 /* Alternative.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +442,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D26B190D18BDCB0A736950E /* MatrixSpec.m in Sources */,
+				1D26BB4D7FE01A579AA94B6C /* SaatiMatrixSpec.m in Sources */,
+				1D26B25B165581DF5305507A /* FractionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
