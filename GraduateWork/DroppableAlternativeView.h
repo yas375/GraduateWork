@@ -16,6 +16,8 @@
 @property (nonatomic, weak) id <DroppableAlternativeViewDelegate>delegate;
 
 @property (nonatomic, weak) UIView *viewToDragIn;
+@property (nonatomic, weak) UIView *previousContainer;
+
 - (void)moveBack;
 
 @end

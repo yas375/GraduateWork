@@ -11,7 +11,6 @@
 
 @interface DroppableAlternativeView ()
 @property (nonatomic,strong) UILabel *label;
-@property (nonatomic, weak) UIView *previousSuperview;
 @property (nonatomic, assign) CGRect previousFrame;
 @end
 
@@ -49,12 +48,12 @@
 
 - (void)moveBack
 {
-  CGRect frame = [self.previousSuperview convertRect:self.previousFrame toView:self.superview];
+  CGRect frame = [self.previousContainer convertRect:self.previousFrame toView:self.superview];
 
   [UIView animateWithDuration:0.3 animations:^{
     self.frame = frame;
   } completion:^(BOOL finished) {
-    [self.previousSuperview addSubview:self];
+    [self.previousContainer addSubview:self];
     self.frame = self.previousFrame;
   }];
 }
@@ -64,7 +63,7 @@
   NSAssert(self.viewToDragIn != nil, @"Droppable view must have a view to be dragged inside of.");
 
   self.previousFrame = self.frame;
-  self.previousSuperview = self.superview;
+  self.previousContainer = self.superview;
 
   // move to drag view
   CGRect frame = [self convertRect:self.frame toView:self.viewToDragIn];

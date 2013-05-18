@@ -75,7 +75,16 @@ static const CGFloat kAlternativeSpacer = 10.0f;
 
 - (void)didFinishDragging:(DroppableAlternativeView *)view
 {
-  [view moveBack];
+  CGRect frame = [view.superview convertRect:view.frame toView:self.rankArea.superview];
+  if (CGRectContainsRect(self.rankArea.frame, frame)) {
+    if (view.previousContainer == self.waitContainer) {
+      view.frame = [view.superview convertRect:view.frame toView:self.rankArea];
+      [self.rankArea addSubview:view];
+    }
+  }
+  else {
+    [view moveBack];
+  }
 }
 
 @end
