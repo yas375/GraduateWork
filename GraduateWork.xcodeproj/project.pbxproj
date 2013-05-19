@@ -31,13 +31,11 @@
 		5023D33A16BCFBAB007699AA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33916BCFBAB007699AA /* Default@2x.png */; };
 		5023D33C16BCFBAB007699AA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33B16BCFBAB007699AA /* Default-568h@2x.png */; };
 		5023D33F16BCFBAB007699AA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33D16BCFBAB007699AA /* MainStoryboard.storyboard */; };
-		5023D34216BCFBAB007699AA /* VIMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D34116BCFBAB007699AA /* VIMasterViewController.m */; };
 		5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D34416BCFBAB007699AA /* VIDetailViewController.m */; };
 		5023D34D16BCFBAB007699AA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D34C16BCFBAB007699AA /* SenTestingKit.framework */; };
 		5023D34E16BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
-		5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D36416BD0031007699AA /* VISaatiViewController.m */; };
 		5063E96E17428106003F62BB /* SaatiRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5063E96D17428106003F62BB /* SaatiRankViewController.m */; };
 		50E5020C17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */; };
 		50E5020E1748D7E300B8F7EF /* SaatiStrategySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5020D1748D7E300B8F7EF /* SaatiStrategySpec.m */; };
@@ -57,26 +55,26 @@
 /* Begin PBXFileReference section */
 		1D26B00402C953A21345236C /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		1D26B341218B105AADE7A33A /* MatrixSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixSpec.m; sourceTree = "<group>"; };
-		1D26B3EDC334B5ABC5F5F8DA /* SaatiRankAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiRankAreaView.h; sourceTree = "<group>"; };
-		1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiMatrix.h; sourceTree = "<group>"; };
+		1D26B3EDC334B5ABC5F5F8DA /* SaatiRankAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaatiRankAreaView.h; path = ../../SaatiRankAreaView.h; sourceTree = "<group>"; };
+		1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaatiMatrix.h; path = ../../Logic/Saati/SaatiMatrix.h; sourceTree = "<group>"; };
 		1D26B86D8A916E00C9AC253C /* SaatiStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiStrategy.h; sourceTree = "<group>"; };
 		1D26B8A6ABE42128809C81E5 /* SaatiStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiStrategy.m; sourceTree = "<group>"; };
 		1D26B993F681259AEDB4D615 /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		1D26BAC05C88EC1B255BA331 /* SaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiViewController.h; sourceTree = "<group>"; };
 		1D26BBB6BAA52AB108482D87 /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
-		1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiMatrix.m; sourceTree = "<group>"; };
-		1D26BDB68F7B497E4AB0F6A7 /* SaatiRankAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiRankAreaView.m; sourceTree = "<group>"; };
+		1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiMatrix.m; path = ../../Logic/Saati/SaatiMatrix.m; sourceTree = "<group>"; };
+		1D26BDB68F7B497E4AB0F6A7 /* SaatiRankAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiRankAreaView.m; path = ../../SaatiRankAreaView.m; sourceTree = "<group>"; };
 		1D26BDCF68DE8C175F680B1B /* SaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiViewController.m; sourceTree = "<group>"; };
 		1D26BE70F38447E2A0DC666A /* SaatiMatrixSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiMatrixSpec.m; sourceTree = "<group>"; };
-		1D26BE80CA4B1869FBC10E00 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
-		1D26BF26E36C3F48230386FF /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
-		1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FractionSpec.m; sourceTree = "<group>"; };
+		1D26BE80CA4B1869FBC10E00 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fraction.m; path = ../Fraction.m; sourceTree = "<group>"; };
+		1D26BF26E36C3F48230386FF /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fraction.h; path = ../Fraction.h; sourceTree = "<group>"; };
+		1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FractionSpec.m; path = ../FractionSpec.m; sourceTree = "<group>"; };
 		2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraduateWorkTests.xcconfig"; path = "Pods/Pods-GraduateWorkTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		5000B8E21748E0150037C323 /* SaatiRankingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiRankingPageViewController.h; sourceTree = "<group>"; };
 		5000B8E31748E0150037C323 /* SaatiRankingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiRankingPageViewController.m; sourceTree = "<group>"; };
-		5000B8E71748E8D60037C323 /* SaatiRankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaatiRankViewController.xib; sourceTree = "<group>"; };
-		501F67091742842E00FE8903 /* DroppableAlternativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DroppableAlternativeView.h; sourceTree = "<group>"; };
-		501F670A1742842E00FE8903 /* DroppableAlternativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DroppableAlternativeView.m; sourceTree = "<group>"; };
+		5000B8E71748E8D60037C323 /* SaatiRankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SaatiRankViewController.xib; path = ../../../SaatiRankViewController.xib; sourceTree = "<group>"; };
+		501F67091742842E00FE8903 /* DroppableAlternativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DroppableAlternativeView.h; path = ../../DroppableAlternativeView.h; sourceTree = "<group>"; };
+		501F670A1742842E00FE8903 /* DroppableAlternativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DroppableAlternativeView.m; path = ../../DroppableAlternativeView.m; sourceTree = "<group>"; };
 		501F670F17428F7E00FE8903 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5023D32216BCFBAB007699AA /* GraduateWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraduateWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D32516BCFBAB007699AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -92,20 +90,16 @@
 		5023D33916BCFBAB007699AA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5023D33B16BCFBAB007699AA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5023D33E16BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5023D34016BCFBAB007699AA /* VIMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIMasterViewController.h; sourceTree = "<group>"; };
-		5023D34116BCFBAB007699AA /* VIMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIMasterViewController.m; sourceTree = "<group>"; };
 		5023D34316BCFBAB007699AA /* VIDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDetailViewController.h; sourceTree = "<group>"; };
 		5023D34416BCFBAB007699AA /* VIDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIDetailViewController.m; sourceTree = "<group>"; };
 		5023D34B16BCFBAB007699AA /* GraduateWorkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraduateWorkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D34C16BCFBAB007699AA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5023D35416BCFBAB007699AA /* GraduateWorkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraduateWorkTests-Info.plist"; sourceTree = "<group>"; };
 		5023D35616BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5023D36316BD0030007699AA /* VISaatiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VISaatiViewController.h; sourceTree = "<group>"; };
-		5023D36416BD0031007699AA /* VISaatiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VISaatiViewController.m; sourceTree = "<group>"; };
-		5063E96C17428106003F62BB /* SaatiRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaatiRankViewController.h; sourceTree = "<group>"; };
-		5063E96D17428106003F62BB /* SaatiRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiRankViewController.m; sourceTree = "<group>"; };
-		50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiRankAreaViewSpec.m; sourceTree = "<group>"; };
-		50E5020D1748D7E300B8F7EF /* SaatiStrategySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaatiStrategySpec.m; sourceTree = "<group>"; };
+		5063E96C17428106003F62BB /* SaatiRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaatiRankViewController.h; path = ../../../SaatiRankViewController.h; sourceTree = "<group>"; };
+		5063E96D17428106003F62BB /* SaatiRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiRankViewController.m; path = ../../../SaatiRankViewController.m; sourceTree = "<group>"; };
+		50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiRankAreaViewSpec.m; path = ../../SaatiRankAreaViewSpec.m; sourceTree = "<group>"; };
+		50E5020D1748D7E300B8F7EF /* SaatiStrategySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiStrategySpec.m; path = ../../Strategies/SaatiStrategySpec.m; sourceTree = "<group>"; };
 		51DE0B7AA4B74E65AF51B21E /* libPods-GraduateWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraduateWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC83B556A73457DA23F5E31 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7629F92201ED4B2789E0B704 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -138,13 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D26B1130246BD565260D7C0 /* Logic */ = {
+		1D26B1130246BD565260D7C0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D26B37F958D97FEA89F757F /* Saati */,
+				1D26BF26E36C3F48230386FF /* Fraction.h */,
+				1D26BE80CA4B1869FBC10E00 /* Fraction.m */,
 				1D26B00402C953A21345236C /* Matrix.h */,
 				1D26B993F681259AEDB4D615 /* Matrix.m */,
 			);
+			name = Models;
 			path = Logic;
 			sourceTree = "<group>";
 		};
@@ -152,75 +148,97 @@
 			isa = PBXGroup;
 			children = (
 				1D26BE70F38447E2A0DC666A /* SaatiMatrixSpec.m */,
-			);
-			path = Saati;
-			sourceTree = "<group>";
-		};
-		1D26B37F958D97FEA89F757F /* Saati */ = {
-			isa = PBXGroup;
-			children = (
-				1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */,
-				1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */,
-			);
-			path = Saati;
-			sourceTree = "<group>";
-		};
-		1D26B388431D3C07B1C4495F /* Strategies */ = {
-			isa = PBXGroup;
-			children = (
+				50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */,
 				50E5020D1748D7E300B8F7EF /* SaatiStrategySpec.m */,
 			);
-			path = Strategies;
+			name = Saati;
+			path = Logic/Saati;
 			sourceTree = "<group>";
 		};
 		1D26B4E17489F88232B9DF57 /* Saati */ = {
 			isa = PBXGroup;
 			children = (
+				5000B8EC1749238D0037C323 /* Models */,
 				1D26B86D8A916E00C9AC253C /* SaatiStrategy.h */,
 				1D26B8A6ABE42128809C81E5 /* SaatiStrategy.m */,
 				1D26B71C30927A817B900E49 /* ViewControllers */,
+				5000B8EB174922E10037C323 /* Views */,
 			);
 			path = Saati;
 			sourceTree = "<group>";
 		};
-		1D26B513EF161C5A2EDE1901 /* Logic */ = {
+		1D26B513EF161C5A2EDE1901 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */,
 				1D26B341218B105AADE7A33A /* MatrixSpec.m */,
-				1D26B2C3DB47AA63EC05383A /* Saati */,
 			);
+			name = Models;
 			path = Logic;
 			sourceTree = "<group>";
 		};
 		1D26B71C30927A817B900E49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D26BAC05C88EC1B255BA331 /* SaatiViewController.h */,
-				1D26BDCF68DE8C175F680B1B /* SaatiViewController.m */,
 				5000B8E21748E0150037C323 /* SaatiRankingPageViewController.h */,
 				5000B8E31748E0150037C323 /* SaatiRankingPageViewController.m */,
+				5063E96C17428106003F62BB /* SaatiRankViewController.h */,
+				5063E96D17428106003F62BB /* SaatiRankViewController.m */,
+				5000B8E71748E8D60037C323 /* SaatiRankViewController.xib */,
+				1D26BAC05C88EC1B255BA331 /* SaatiViewController.h */,
+				1D26BDCF68DE8C175F680B1B /* SaatiViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		1D26B862154D6A5AE60B4233 /* Strategies */ = {
+		1D26B862154D6A5AE60B4233 /* AlgorythmStrategies */ = {
 			isa = PBXGroup;
 			children = (
-				1D26BBB6BAA52AB108482D87 /* Strategy.h */,
 				1D26B4E17489F88232B9DF57 /* Saati */,
+				1D26BBB6BAA52AB108482D87 /* Strategy.h */,
 			);
+			name = AlgorythmStrategies;
 			path = Strategies;
+			sourceTree = "<group>";
+		};
+		5000B8EB174922E10037C323 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				501F67091742842E00FE8903 /* DroppableAlternativeView.h */,
+				501F670A1742842E00FE8903 /* DroppableAlternativeView.m */,
+				1D26B3EDC334B5ABC5F5F8DA /* SaatiRankAreaView.h */,
+				1D26BDB68F7B497E4AB0F6A7 /* SaatiRankAreaView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5000B8EC1749238D0037C323 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D26B5BB7ED466250CF0C583 /* SaatiMatrix.h */,
+				1D26BD057E1812EEAB3B2EED /* SaatiMatrix.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5000B8ED174924400037C323 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				5023D34316BCFBAB007699AA /* VIDetailViewController.h */,
+				5023D34416BCFBAB007699AA /* VIDetailViewController.m */,
+			);
+			name = Viewcontrollers;
 			sourceTree = "<group>";
 		};
 		5023D31916BCFBAB007699AA = {
 			isa = PBXGroup;
 			children = (
+				5023D32416BCFBAB007699AA /* Frameworks */,
 				5023D32B16BCFBAB007699AA /* GraduateWork */,
 				5023D35216BCFBAB007699AA /* GraduateWorkTests */,
-				5023D32416BCFBAB007699AA /* Frameworks */,
-				5023D32316BCFBAB007699AA /* Products */,
 				2A5442F28F8B4E808E37072D /* Pods-GraduateWorkTests.xcconfig */,
 				7629F92201ED4B2789E0B704 /* Pods.xcconfig */,
+				5023D32316BCFBAB007699AA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,27 +268,13 @@
 		5023D32B16BCFBAB007699AA /* GraduateWork */ = {
 			isa = PBXGroup;
 			children = (
-				501F67091742842E00FE8903 /* DroppableAlternativeView.h */,
-				501F670A1742842E00FE8903 /* DroppableAlternativeView.m */,
-				1D26BF26E36C3F48230386FF /* Fraction.h */,
-				1D26BE80CA4B1869FBC10E00 /* Fraction.m */,
-				1D26B1130246BD565260D7C0 /* Logic */,
+				1D26B862154D6A5AE60B4233 /* AlgorythmStrategies */,
 				5023D33D16BCFBAB007699AA /* MainStoryboard.storyboard */,
-				1D26B3EDC334B5ABC5F5F8DA /* SaatiRankAreaView.h */,
-				1D26BDB68F7B497E4AB0F6A7 /* SaatiRankAreaView.m */,
-				5063E96C17428106003F62BB /* SaatiRankViewController.h */,
-				5063E96D17428106003F62BB /* SaatiRankViewController.m */,
-				5000B8E71748E8D60037C323 /* SaatiRankViewController.xib */,
-				1D26B862154D6A5AE60B4233 /* Strategies */,
+				1D26B1130246BD565260D7C0 /* Models */,
 				5023D32C16BCFBAB007699AA /* Supporting Files */,
 				5023D33416BCFBAB007699AA /* VIAppDelegate.h */,
 				5023D33516BCFBAB007699AA /* VIAppDelegate.m */,
-				5023D34316BCFBAB007699AA /* VIDetailViewController.h */,
-				5023D34416BCFBAB007699AA /* VIDetailViewController.m */,
-				5023D34016BCFBAB007699AA /* VIMasterViewController.h */,
-				5023D34116BCFBAB007699AA /* VIMasterViewController.m */,
-				5023D36316BD0030007699AA /* VISaatiViewController.h */,
-				5023D36416BD0031007699AA /* VISaatiViewController.m */,
+				5000B8ED174924400037C323 /* Viewcontrollers */,
 			);
 			path = GraduateWork;
 			sourceTree = "<group>";
@@ -292,11 +296,9 @@
 		5023D35216BCFBAB007699AA /* GraduateWorkTests */ = {
 			isa = PBXGroup;
 			children = (
+				1D26B513EF161C5A2EDE1901 /* Models */,
+				1D26B2C3DB47AA63EC05383A /* Saati */,
 				5023D35316BCFBAB007699AA /* Supporting Files */,
-				1D26B513EF161C5A2EDE1901 /* Logic */,
-				1D26BF2A8A2F3BF1149BB493 /* FractionSpec.m */,
-				50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */,
-				1D26B388431D3C07B1C4495F /* Strategies */,
 			);
 			path = GraduateWorkTests;
 			sourceTree = "<group>";
@@ -484,9 +486,7 @@
 			files = (
 				5023D33216BCFBAB007699AA /* main.m in Sources */,
 				5023D33616BCFBAB007699AA /* VIAppDelegate.m in Sources */,
-				5023D34216BCFBAB007699AA /* VIMasterViewController.m in Sources */,
 				5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */,
-				5023D36516BD0031007699AA /* VISaatiViewController.m in Sources */,
 				1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */,
 				1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */,
 				1D26BCCF1E3B8C15C5A646E2 /* Fraction.m in Sources */,
