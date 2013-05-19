@@ -24,6 +24,11 @@ SPEC_BEGIN(MatrixSpec)
           [[theValue([matrix valueForRow:2 column:1]) should] equal:theValue(4)];
         });
       });
+      it(@"can be copied", ^{
+        [matrix setValue:42 forRow:2 column:1];
+        Matrix *copy = [matrix copy];
+        [[theValue([copy valueForRow:2 column:1]) should] equal:theValue(42)];
+      });
     });
   });
 SPEC_END

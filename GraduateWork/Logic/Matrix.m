@@ -70,4 +70,15 @@
   return [storage[row][column] floatValue];
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone
+{
+  Matrix *theCopy = [[self.class allocWithZone:zone] initWithSize:self.size];
+  theCopy->storage = [storage copy];
+
+  return theCopy;
+}
+
+
 @end

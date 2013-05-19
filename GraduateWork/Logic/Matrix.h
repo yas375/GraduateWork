@@ -6,7 +6,7 @@
 //
 
 
-@interface Matrix : NSObject
+@interface Matrix : NSObject <NSCopying>
 @property(nonatomic) NSInteger size;
 
 - (id)initWithSize:(NSInteger)size;
