@@ -10,7 +10,12 @@
 #import "SaatiRankViewController.h"
 
 @interface SaatiRankingPageViewController ()
-<UIPageViewControllerDataSource>
+<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+
+@property (strong, nonatomic) UIBarButtonItem *nextButton;
+@property (strong, nonatomic) UIBarButtonItem *prevButton;
+@property (strong, nonatomic) UIBarButtonItem *cancelButton;
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
 
 @end
 
@@ -21,18 +26,63 @@
   self.dataSource = nil;
 }
 
-- (void)viewDidLoad
+- (id)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary *)options
 {
-  [super viewDidLoad];
+  self = [super initWithTransitionStyle:style navigationOrientation:navigationOrientation options:options];
+  if (self) {
+    self.dataSource = self;
+    self.delegate = self;
 
-  NSAssert(self.strategy.alternatives.count > 1, @"It is required to have at least two alternatives.");
+    __weak typeof(self) weakSelf = self;
+    self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
+      [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone handler:^(id sender) {
+      [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    self.prevButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStyleBordered target:self action:@selector(previous:)];
+    self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleBordered target:self action:@selector(next:)];
+  }
 
-  [self setViewControllers:@[[self rankViewControllerForAlternativeAtIndex:0]]
-                 direction:UIPageViewControllerNavigationDirectionForward
-                  animated:NO
-                completion:NULL];
+  return self;
+}
 
-  self.dataSource = self;
+#pragma mark - Actions
+
+- (void)previous:(id)sender
+{
+  NSUInteger index = [self currentAlternativeIndex];
+  if (index > 0) {
+    __weak typeof(self) weakSelf = self;
+    [self setViewControllers:@[[self rankViewControllerForAlternativeAtIndex:index - 1]]
+                   direction:UIPageViewControllerNavigationDirectionReverse
+                    animated:YES
+                  completion:^(BOOL finished) {
+                    [weakSelf updateButtons];
+                  }];
+  }
+}
+
+- (void)next:(id)sender
+{
+  NSUInteger index = [self currentAlternativeIndex];
+  if (index < self.strategy.alternatives.count - 1) {
+    __weak typeof(self) weakSelf = self;
+    [self setViewControllers:@[[self rankViewControllerForAlternativeAtIndex:index + 1]]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:YES
+                  completion:^(BOOL finished) {
+                    [weakSelf updateButtons];
+                  }];
+  }
+}
+
+#pragma mark - Methods
+
+- (NSUInteger)currentAlternativeIndex
+{
+  NSString *alternative = [self.viewControllers.lastObject baseAlternative];
+  return [self.strategy.alternatives indexOfObject:alternative];
 }
 
 - (SaatiRankViewController *)rankViewControllerForAlternativeAtIndex:(NSUInteger)index
@@ -44,6 +94,23 @@
   [otherAlternatives removeObject:rankViewController.baseAlternative];
   rankViewController.otherAlternatives = otherAlternatives;
   return rankViewController;
+}
+
+- (void)updateButtons
+{
+  NSUInteger index = [self currentAlternativeIndex];
+  if (index == 0) {
+    self.navigationItem.leftBarButtonItem = self.cancelButton;
+  }
+  else {
+    self.navigationItem.leftBarButtonItem = self.prevButton;
+  }
+  if (index == self.strategy.alternatives.count - 1) {
+    self.navigationItem.rightBarButtonItem = self.doneButton;
+  }
+  else {
+    self.navigationItem.rightBarButtonItem = self.nextButton;
+  }
 }
 
 #pragma mark - UIPageViewControllerDataSource
@@ -78,5 +145,33 @@
   return 0;
 }
 
+#pragma mark - UIPageViewControllerDelegate
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+  if (finished) {
+    [self updateButtons];
+  }
+}
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+
+  NSAssert(self.strategy.alternatives.count > 1, @"It is required to have at least two alternatives.");
+
+  [self setViewControllers:@[[self rankViewControllerForAlternativeAtIndex:0]]
+                 direction:UIPageViewControllerNavigationDirectionForward
+                  animated:NO
+                completion:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self updateButtons];
+}
 
 @end

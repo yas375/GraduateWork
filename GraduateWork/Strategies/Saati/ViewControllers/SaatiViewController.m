@@ -11,19 +11,19 @@
 static NSString *const kRankSegue = @"kRankSegue";
 
 @interface SaatiViewController ()
-<UIPageViewControllerDataSource>
 
 @end
 
 @implementation SaatiViewController
 
-
-
 #pragma mark - UIViewController
 - (IBAction)rank:(id)sender {
-  UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-  pageController.dataSource = self;
-  [self.navigationController pushViewController:pageController animated:YES];
+
+  SaatiRankingPageViewController *pageController = [[SaatiRankingPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+  pageController.strategy = self.strategy;
+
+  UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:pageController];
+  [self presentViewController:navigation animated:YES completion:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -33,33 +33,5 @@ static NSString *const kRankSegue = @"kRankSegue";
     pageController.strategy = self.strategy;
   }
 }
-
-#pragma mark - UIPageViewControllerDataSource
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
-      viewControllerBeforeViewController:(UIViewController *)viewController
-{
-  SaatiRankViewController *rankViewController = [[SaatiRankViewController alloc] initWithNibName:@"SaatiRankViewController" bundle:nil];
-  rankViewController.otherAlternatives = self.strategy.alternatives;
-  return rankViewController;
-}
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
-       viewControllerAfterViewController:(UIViewController *)viewController
-{
-  SaatiRankViewController *rankViewController = [[SaatiRankViewController alloc] initWithNibName:@"SaatiRankViewController" bundle:nil];
-  rankViewController.otherAlternatives = self.strategy.alternatives;
-  return rankViewController;
-}
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-  return self.strategy.alternatives.count;
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-  return 0;
-}
-
 
 @end
