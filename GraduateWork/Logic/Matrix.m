@@ -38,7 +38,6 @@
 
 - (NSString *)stringValue
 {
-  
   NSMutableString *string = [NSMutableString string];
   for (NSArray *row in storage) {
     for (id value in row) {

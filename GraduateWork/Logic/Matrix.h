@@ -8,6 +8,7 @@
 #import "Fraction.h"
 
 @interface Matrix : NSObject <NSCopying>
+
 @property(nonatomic) NSInteger size;
 
 - (id)initWithSize:(NSInteger)size;
@@ -16,4 +17,7 @@
 - (Fraction *)valueForRow:(NSUInteger)row column:(NSUInteger)column;
 
 - (NSArray *)rowAtIndex:(NSUInteger)row;
+
+- (NSString *)stringValue;
+
 @end

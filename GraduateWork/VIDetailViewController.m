@@ -44,10 +44,10 @@ static NSString *const kSaatiSegue = @"kSaatiSegue";
   if ([segue.identifier isEqualToString:kSaatiSegue]) {
     SaatiStrategy *strategy = [[SaatiStrategy alloc] init];
     strategy.alternatives = @[
-            @"Metro",
-            @"TV",
-            @"Radio",
-            @"Ещё где-то там далеко-далеко"
+            @"В метро",
+            @"На TV",
+            @"На радио",
+            @"В интернете"
     ];
 
     SaatiViewController *controller = (SaatiViewController *)segue.destinationViewController;

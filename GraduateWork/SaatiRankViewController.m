@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 Victor Ilyukevich. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "SaatiRankViewController.h"
 #import "DroppableAlternativeView.h"
 #import "SaatiRankAreaView.h"
 
-static const CGFloat kAlternativeViewHeight = 80.0f;
-static const CGFloat kAlternativeSpacer = 10.0f;
+static const CGFloat kAlternativeViewHeight = 30.0f;
+static const CGFloat kAlternativeSpacer = 5.0f;
 
 @interface SaatiRankViewController ()
 <DroppableAlternativeViewDelegate>
 
 @property (weak, nonatomic) IBOutlet SaatiRankAreaView *rankArea;
 @property (weak, nonatomic) IBOutlet UIView *waitContainer;
+@property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 
 @property (strong, nonatomic) NSArray *alternativeViews; // droppable views
 
@@ -83,9 +83,15 @@ static const CGFloat kAlternativeSpacer = 10.0f;
       }
     }
   }
+  [self updateDebugInfo];
 }
 
 #pragma mark - Methods
+
+- (void)updateDebugInfo
+{
+  self.debugLabel.text = self.delegate.matrix.stringValue;
+}
 
 #pragma mark - DroppableAlternativeViewDelegate
 
@@ -96,11 +102,12 @@ static const CGFloat kAlternativeSpacer = 10.0f;
     if (view.previousContainer == self.waitContainer) {
       view.frame = [view.superview convertRect:view.frame toView:self.rankArea];
       [self.rankArea addSubview:view];
-
-      // TODO: cache positions
-      Fraction *rank = [self.rankArea fractionForY:view.center.y];
-      [self.delegate rankPage:self didUpdateRank:rank ofAlternative:view.alternative];
     }
+    // TODO: cache positions
+    Fraction *rank = [self.rankArea fractionForY:view.center.y];
+    [self.delegate rankPage:self didUpdateRank:rank ofAlternative:view.alternative];
+
+    [self updateDebugInfo];
   }
   else {
     [view moveBack];

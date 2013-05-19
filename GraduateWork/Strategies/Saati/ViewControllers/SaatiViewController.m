@@ -11,12 +11,12 @@
 static NSString *const kRankSegue = @"kRankSegue";
 
 @interface SaatiViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 @end
 
 @implementation SaatiViewController
 
-#pragma mark - UIViewController
+#pragma mark - Actions
 
 - (IBAction)rank:(id)sender {
 
@@ -27,12 +27,20 @@ static NSString *const kRankSegue = @"kRankSegue";
   [self presentViewController:navigation animated:YES completion:nil];
 }
 
+#pragma mark - UIViewController
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([segue.identifier isEqualToString:kRankSegue]) {
     SaatiRankingPageViewController *pageController = (SaatiRankingPageViewController *)segue.destinationViewController;
     pageController.strategy = self.strategy;
   }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  self.debugLabel.text = self.strategy.rankMatrix.stringValue;
 }
 
 @end

@@ -212,8 +212,11 @@
   NSUInteger indexOfUpdatedAlternative = [self.strategy.alternatives indexOfObject:alternative];
 
   [self.rankMatrix setValue:rank forRow:indexOfBaseAlternative column:indexOfUpdatedAlternative];
+}
 
-  NSLog(@"%@", self.rankMatrix);
+- (SaatiMatrix *)matrix
+{
+  return self.rankMatrix;
 }
 
 @end

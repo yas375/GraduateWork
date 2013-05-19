@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Victor Ilyukevich. All rights reserved.
 //
 
-@protocol SaatiRankViewControllerDelegate;
+
 #import "Fraction.h"
+#import "SaatiMatrix.h"
+
+@protocol SaatiRankViewControllerDelegate;
 
 @interface SaatiRankViewController : UIViewController
 
@@ -24,6 +27,8 @@
 */
 - (NSArray *)ranksOfAlternatives:(SaatiRankViewController *)page;
 - (void)rankPage:(SaatiRankViewController *)page didUpdateRank:(Fraction *)rank ofAlternative:(NSString *)alternative;
+
+- (SaatiMatrix *)matrix; // for debug purposes
 
 @end
 
