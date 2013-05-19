@@ -17,6 +17,7 @@ static NSString *const kRankSegue = @"kRankSegue";
 @implementation SaatiViewController
 
 #pragma mark - UIViewController
+
 - (IBAction)rank:(id)sender {
 
   SaatiRankingPageViewController *pageController = [[SaatiRankingPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];

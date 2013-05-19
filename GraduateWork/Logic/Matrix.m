@@ -7,6 +7,8 @@
 
 #import "Matrix.h"
 
+#define MATRIX_WIDTH_PER_ITEM 5
+
 @implementation Matrix {
   NSMutableArray *storage;
 }
@@ -33,6 +35,29 @@
 }
 
 #pragma mark - Methods
+
+- (NSString *)stringValue
+{
+  
+  NSMutableString *string = [NSMutableString string];
+  for (NSArray *row in storage) {
+    for (id value in row) {
+      [string appendFormat:@"%@     ", value];
+    }
+    [string appendString:@"\n"];
+  }
+  return string;
+}
+
+- (NSString *)description
+{
+  return [@"\n" stringByAppendingString:self.stringValue];
+}
+
+- (NSArray *)rowAtIndex:(NSUInteger)row
+{
+  return [storage[row] copy];
+}
 
 // TODO: test
 - (void)setSize:(NSInteger)size
@@ -78,6 +103,5 @@
 
   return theCopy;
 }
-
 
 @end

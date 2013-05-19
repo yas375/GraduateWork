@@ -15,4 +15,5 @@
 - (void)setValue:(Fraction *)value forRow:(NSUInteger)row column:(NSUInteger)column;
 - (Fraction *)valueForRow:(NSUInteger)row column:(NSUInteger)column;
 
+- (NSArray *)rowAtIndex:(NSUInteger)row;
 @end

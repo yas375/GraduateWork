@@ -11,6 +11,7 @@
 
 
 @interface SaatiRankAreaView ()
+@property(nonatomic, strong) IBOutlet UILabel *baseAlternativeLabel;
 @property(nonatomic, strong) NSArray *rankValues;
 @end
 
@@ -61,6 +62,11 @@
 - (CGFloat)heightPerValue
 {
   return (self.bounds.size.height / self.rankValues.count);
+}
+
+- (void)setBaseAlternative:(NSString *)baseAlternative
+{
+  self.baseAlternativeLabel.text = baseAlternative;
 }
 
 @end

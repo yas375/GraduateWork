@@ -14,4 +14,5 @@
 - (Fraction *)fractionForY:(CGFloat)y;
 - (CGFloat)yForFraction:(Fraction *)fraction;
 
+- (void)setBaseAlternative:(NSString *)baseAlternative;
 @end

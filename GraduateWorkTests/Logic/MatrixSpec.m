@@ -29,6 +29,16 @@ SPEC_BEGIN(MatrixSpec)
         Matrix *copy = [matrix copy];
         [[[copy valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:42]];
       });
+      it(@"returns row of objects", ^{
+        [matrix setValue:[Fraction fractionWithNumerator:42] forRow:2 column:0];
+        [matrix setValue:[Fraction fractionWithNumerator:14] forRow:2 column:2];
+        NSArray *row = [matrix rowAtIndex:2];
+        [[row should] equal:@[
+                [Fraction fractionWithNumerator:42],
+                [NSNull null],
+                [Fraction fractionWithNumerator:14]
+        ]];
+      });
     });
   });
 SPEC_END

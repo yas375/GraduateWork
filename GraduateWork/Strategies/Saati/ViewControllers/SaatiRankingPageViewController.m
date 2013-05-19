@@ -10,7 +10,7 @@
 #import "SaatiRankViewController.h"
 
 @interface SaatiRankingPageViewController ()
-<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+<SaatiRankViewControllerDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 /**
   We will store copy of rank matrix from SaatiStrategy in this property.
@@ -106,11 +106,13 @@
 - (SaatiRankViewController *)rankViewControllerForAlternativeAtIndex:(NSUInteger)index
 {
   SaatiRankViewController *rankViewController = [[SaatiRankViewController alloc] initWithNibName:@"SaatiRankViewController" bundle:nil];
+  rankViewController.delegate = self;
   rankViewController.baseAlternative = self.strategy.alternatives[index];
 
   NSMutableArray *otherAlternatives = [self.strategy.alternatives mutableCopy];
   [otherAlternatives removeObject:rankViewController.baseAlternative];
   rankViewController.otherAlternatives = otherAlternatives;
+
   return rankViewController;
 }
 
@@ -190,6 +192,28 @@
 {
   [super viewWillAppear:animated];
   [self updateButtons];
+}
+
+#pragma mark - SaatiRankViewControllerDelegate
+
+- (NSArray *)ranksOfAlternatives:(SaatiRankViewController *)page
+{
+  NSString *base = page.baseAlternative;
+  NSUInteger index = [self.strategy.alternatives indexOfObject:base];
+  NSMutableArray *row = [[self.rankMatrix rowAtIndex:index] mutableCopy];
+  [row removeObjectAtIndex:index]; // remove base
+  return row;
+}
+
+- (void)rankPage:(SaatiRankViewController *)page didUpdateRank:(Fraction *)rank ofAlternative:(NSString *)alternative
+{
+  NSString *base = page.baseAlternative;
+  NSUInteger indexOfBaseAlternative = [self.strategy.alternatives indexOfObject:base];
+  NSUInteger indexOfUpdatedAlternative = [self.strategy.alternatives indexOfObject:alternative];
+
+  [self.rankMatrix setValue:rank forRow:indexOfBaseAlternative column:indexOfUpdatedAlternative];
+
+  NSLog(@"%@", self.rankMatrix);
 }
 
 @end
