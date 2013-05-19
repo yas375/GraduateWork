@@ -20,4 +20,12 @@
   return NO;
 }
 
+- (void)setAlternatives:(NSArray *)alternatives
+{
+  if (alternatives != _alternatives) {
+    _alternatives = alternatives;
+  }
+  self.rankMatrix = [[SaatiMatrix alloc] initWithSize:self.alternatives.count];
+}
+
 @end

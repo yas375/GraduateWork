@@ -12,6 +12,12 @@
 @interface SaatiRankingPageViewController ()
 <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
+/**
+  We will store copy of rank matrix from SaatiStrategy in this property.
+  This matrix will be updated during ranking. And at the end if user taps 'Done' - we set this value
+  into strategy. Otherwise we do just nothing.
+ */
+@property (copy, nonatomic) SaatiMatrix *rankMatrix;
 @property (strong, nonatomic) UIBarButtonItem *nextButton;
 @property (strong, nonatomic) UIBarButtonItem *prevButton;
 @property (strong, nonatomic) UIBarButtonItem *cancelButton;
@@ -38,6 +44,7 @@
       [weakSelf dismissViewControllerAnimated:YES completion:nil];
     }];
     self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone handler:^(id sender) {
+      weakSelf.strategy.rankMatrix = weakSelf.rankMatrix;
       [weakSelf dismissViewControllerAnimated:YES completion:nil];
     }];
     self.prevButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStyleBordered target:self action:@selector(previous:)];
@@ -74,6 +81,17 @@
                   completion:^(BOOL finished) {
                     [weakSelf updateButtons];
                   }];
+  }
+}
+
+#pragma mark - Setters
+
+- (void)setStrategy:(SaatiStrategy *)strategy
+{
+  if (strategy != _strategy)
+  {
+    _strategy = strategy;
+    self.rankMatrix = self.strategy.rankMatrix;
   }
 }
 

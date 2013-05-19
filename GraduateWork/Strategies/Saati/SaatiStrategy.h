@@ -6,6 +6,10 @@
 //
 
 #import "Strategy.h"
+#import "SaatiMatrix.h"
 
 @interface SaatiStrategy : NSObject <Strategy>
+
+@property (nonatomic, copy) SaatiMatrix *rankMatrix;
+
 @end
