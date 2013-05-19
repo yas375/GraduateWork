@@ -59,15 +59,14 @@
   }
 }
 
-- (void)setValue:(CGFloat)value forRow:(NSUInteger)row column:(NSUInteger)column
+- (void)setValue:(Fraction *)value forRow:(NSUInteger)row column:(NSUInteger)column
 {
-
-  [(NSMutableArray *)storage[row] replaceObjectAtIndex:column withObject:@(value)];
+  [(NSMutableArray *)storage[row] replaceObjectAtIndex:column withObject:value];
 }
 
-- (CGFloat)valueForRow:(NSUInteger)row column:(NSUInteger)column
+- (Fraction *)valueForRow:(NSUInteger)row column:(NSUInteger)column
 {
-  return [storage[row][column] floatValue];
+  return storage[row][column];
 }
 
 #pragma mark - NSCopying

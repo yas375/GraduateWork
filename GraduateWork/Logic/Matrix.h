@@ -5,13 +5,14 @@
 // To change the template use AppCode | Preferences | File Templates.
 //
 
+#import "Fraction.h"
 
 @interface Matrix : NSObject <NSCopying>
 @property(nonatomic) NSInteger size;
 
 - (id)initWithSize:(NSInteger)size;
 
-- (void)setValue:(CGFloat)value forRow:(NSUInteger)row column:(NSUInteger)column;
-- (CGFloat)valueForRow:(NSUInteger)row column:(NSUInteger)column;
+- (void)setValue:(Fraction *)value forRow:(NSUInteger)row column:(NSUInteger)column;
+- (Fraction *)valueForRow:(NSUInteger)row column:(NSUInteger)column;
 
 @end

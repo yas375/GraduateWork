@@ -14,20 +14,20 @@ SPEC_BEGIN(MatrixSpec)
       });
       context(@"set value 3 to row 2 column 1", ^{
         beforeEach(^{
-          [matrix setValue:3 forRow:2 column:1];
+          [matrix setValue:[Fraction fractionWithNumerator:3] forRow:2 column:1];
         });
         it(@"returns value 3", ^{
-          [[theValue([matrix valueForRow:2 column:1]) should] equal:theValue(3)];
+          [[[matrix valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:3]];
         });
         it(@"changes value to 4 and returns correct value", ^{
-          [matrix setValue:4 forRow:2 column:1];
-          [[theValue([matrix valueForRow:2 column:1]) should] equal:theValue(4)];
+          [matrix setValue:[Fraction fractionWithNumerator:4] forRow:2 column:1];
+          [[[matrix valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:4]];
         });
       });
       it(@"can be copied", ^{
-        [matrix setValue:42 forRow:2 column:1];
+        [matrix setValue:[Fraction fractionWithNumerator:42] forRow:2 column:1];
         Matrix *copy = [matrix copy];
-        [[theValue([copy valueForRow:2 column:1]) should] equal:theValue(42)];
+        [[[copy valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:42]];
       });
     });
   });
