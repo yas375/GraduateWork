@@ -6,13 +6,11 @@
 //  Copyright (c) 2013 Victor Ilyukevich. All rights reserved.
 //
 
-#import "Alternative.h"
-
 @protocol DroppableAlternativeViewDelegate;
 
 @interface DroppableAlternativeView : UIView
 
-@property (nonatomic, strong) Alternative *alternative;
+@property (nonatomic, copy) NSString *alternative;
 @property (nonatomic, weak) id <DroppableAlternativeViewDelegate>delegate;
 
 @property (nonatomic, weak) UIView *viewToDragIn;

@@ -8,4 +8,7 @@
 
 @interface SaatiRankViewController : UIViewController
 
+@property (nonatomic,copy) NSString *baseAlternative;
+@property (nonatomic,copy) NSArray *otherAlternatives;
+
 @end

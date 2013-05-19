@@ -7,7 +7,6 @@
 //
 
 #import "SaatiRankViewController.h"
-#import "Alternative.h"
 #import "DroppableAlternativeView.h"
 
 static const CGFloat kAlternativeViewHeight = 80.0f;
@@ -19,26 +18,9 @@ static const CGFloat kAlternativeSpacer = 10.0f;
 @property (weak, nonatomic) IBOutlet UIView *rankArea;
 @property (weak, nonatomic) IBOutlet UIView *waitContainer;
 
-@property (nonatomic,strong) Alternative *baseAlternative;
-@property (nonatomic,strong) NSArray *otherAlternatives;
-
 @end
 
 @implementation SaatiRankViewController
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-  self = [super initWithCoder:aDecoder];
-  if (self) {
-    self.baseAlternative = [Alternative alternativeWithName:@"Radio"];
-    self.otherAlternatives = @[ [Alternative alternativeWithName:@"Metro"],
-                                [Alternative alternativeWithName:@"TV"],
-                                [Alternative alternativeWithName:@"Ещё где-то там далеко-далеко"]];
-  }
-
-  return self;
-}
-
 
 - (void)viewDidLoad
 {
@@ -55,7 +37,7 @@ static const CGFloat kAlternativeSpacer = 10.0f;
   CGRect frame = CGRectMake(kAlternativeSpacer,
                             kAlternativeSpacer,
                             width, kAlternativeViewHeight);
-  for (Alternative *alternative in self.otherAlternatives) {
+  for (NSString *alternative in self.otherAlternatives) {
     DroppableAlternativeView *view = [[DroppableAlternativeView alloc] initWithFrame:frame];
     view.viewToDragIn = self.view;
     view.alternative = alternative;

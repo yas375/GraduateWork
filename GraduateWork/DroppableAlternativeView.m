@@ -36,13 +36,18 @@
     return self;
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+  return NO;
+}
+
 #pragma mark - Methods
 
-- (void)setAlternative:(Alternative *)alternative
+- (void)setAlternative:(NSString *)alternative
 {
-  if (alternative != _alternative) {
+  if ([alternative isEqualToString:_alternative] == NO) {
     _alternative = alternative;
-    self.label.text = self.alternative.name;
+    self.label.text = self.alternative;
   }
 }
 

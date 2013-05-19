@@ -7,6 +7,10 @@
 //
 
 #import "VIDetailViewController.h"
+#import "SaatiViewController.h"
+#import "SaatiStrategy.h"
+
+static NSString *const kSaatiSegue = @"kSaatiSegue";
 
 @interface VIDetailViewController ()
 
@@ -31,6 +35,24 @@
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+#pragma mark - UIViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([segue.identifier isEqualToString:kSaatiSegue]) {
+    SaatiStrategy *strategy = [[SaatiStrategy alloc] init];
+    strategy.alternatives = @[
+            @"Metro",
+            @"TV",
+            @"Radio",
+            @"Ещё где-то там далеко-далеко"
+    ];
+
+    SaatiViewController *controller = (SaatiViewController *)segue.destinationViewController;
+    controller.strategy = strategy;
+  }
 }
 
 @end
