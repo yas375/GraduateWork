@@ -42,7 +42,18 @@
   NSMutableString *string = [NSMutableString string];
   for (NSArray *row in storage) {
     for (id value in row) {
-      [string appendFormat:@"%@     ", value];
+      NSString *valueString;
+      if ([value isKindOfClass:NSNull.class]) {
+        valueString = @"-";
+      }
+      else {
+        valueString = [value description];
+      }
+
+      for (int i = valueString.length; i < MATRIX_WIDTH_PER_ITEM; i++) {
+        [string appendFormat:@" "];
+      }
+      [string appendFormat:@"%@  ", valueString];
     }
     [string appendString:@"\n"];
   }
