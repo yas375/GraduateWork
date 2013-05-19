@@ -22,8 +22,7 @@
     return self.rankValues.lastObject;
   }
 
-  CGFloat heightPerValue = self.bounds.size.height / self.rankValues.count;
-  NSUInteger valueIndex = (NSUInteger)(y / heightPerValue);
+  NSUInteger valueIndex = (NSUInteger)(y / self.heightPerValue);
 
   return self.rankValues[valueIndex];
 }
@@ -46,6 +45,22 @@
     }
     self.rankValues = [values copy];
   }
+}
+
+- (CGFloat)yForFraction:(Fraction *)fraction
+{
+  NSUInteger valueIndex = [self.rankValues indexOfObject:fraction];
+
+  if (valueIndex == NSNotFound) {
+    [NSException raise:@"Can't find fraction" format:@"Rank area doesn't have %@ fraction. Max rank is %d", fraction, self.maxRank];
+  }
+
+  return (self.heightPerValue * (valueIndex + 0.5));
+}
+
+- (CGFloat)heightPerValue
+{
+  return (self.bounds.size.height / self.rankValues.count);
 }
 
 @end

@@ -12,5 +12,6 @@
 @property(nonatomic, assign) NSUInteger maxRank;
 
 - (Fraction *)fractionForY:(CGFloat)y;
+- (CGFloat)yForFraction:(Fraction *)fraction;
 
 @end
