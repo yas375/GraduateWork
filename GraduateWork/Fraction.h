@@ -11,7 +11,6 @@
 
 @interface Fraction : NSObject
 @property(nonatomic) NSUInteger numerator;
-
 @property(nonatomic) NSUInteger denominator;
 
 + (Fraction *)fractionWithNumerator:(NSUInteger)numerator denominator:(NSUInteger)denominator;

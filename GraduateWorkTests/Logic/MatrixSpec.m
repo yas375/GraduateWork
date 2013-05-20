@@ -29,6 +29,14 @@ SPEC_BEGIN(MatrixSpec)
         Matrix *copy = [matrix copy];
         [[[copy valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:42]];
       });
+      context(@"value change in matrix copy", ^{
+        it(@"doesn't affect original", ^{
+          [matrix setValue:[Fraction fractionWithNumerator:2] forRow:2 column:1];
+          Matrix *copy = [matrix copy];
+          [copy setValue:[Fraction fractionWithNumerator:42] forRow:2 column:1];
+          [[[matrix valueForRow:2 column:1] should] equal:[Fraction fractionWithNumerator:2]];
+        });
+      });
       it(@"returns row of objects", ^{
         [matrix setValue:[Fraction fractionWithNumerator:42] forRow:2 column:0];
         [matrix setValue:[Fraction fractionWithNumerator:14] forRow:2 column:2];

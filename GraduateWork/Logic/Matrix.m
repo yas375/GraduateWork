@@ -109,7 +109,10 @@
 - (id)copyWithZone:(NSZone *)zone
 {
   Matrix *theCopy = [[self.class allocWithZone:zone] initWithSize:self.size];
-  theCopy->storage = [storage copy];
+  theCopy->storage = [NSMutableArray arrayWithCapacity:self.size];
+  for (NSMutableArray *array in storage) {
+    [theCopy->storage addObject:[array mutableCopy]];
+  }
 
   return theCopy;
 }
