@@ -162,7 +162,7 @@
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
-  return 0;
+  return [self currentAlternativeIndex];
 }
 
 #pragma mark - UIPageViewControllerDelegate
