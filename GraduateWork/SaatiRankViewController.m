@@ -99,10 +99,8 @@ static const CGFloat kAlternativeSpacer = 5.0f;
 {
   CGRect frame = [view.superview convertRect:view.frame toView:self.rankArea.superview];
   if (CGRectContainsRect(self.rankArea.frame, frame)) {
-    if (view.previousContainer == self.waitContainer) {
-      view.frame = [view.superview convertRect:view.frame toView:self.rankArea];
-      [self.rankArea addSubview:view];
-    }
+    view.frame = [view.superview convertRect:view.frame toView:self.rankArea];
+    [self.rankArea addSubview:view];
     // TODO: cache positions
     Fraction *rank = [self.rankArea fractionForY:view.center.y];
     [self.delegate rankPage:self didUpdateRank:rank ofAlternative:view.alternative];
