@@ -72,7 +72,7 @@
 - (void)setAlternatives:(NSArray *)alternatives
 {
   if (alternatives != _alternatives) {
-    _alternatives = alternatives;
+    _alternatives = [alternatives copy];
   }
   self.rankMatrix = [[SaatiMatrix alloc] initWithSize:self.alternatives.count];
 }

@@ -11,10 +11,14 @@
 #import "SaatiStrategy.h"
 
 static NSString *const kSaatiSegue = @"kSaatiSegue";
+static NSString *const kAlternativeCell = @"kAlternativeCell";
 
 @interface VIDetailViewController ()
+<UITableViewDataSource>
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (copy, nonatomic) NSMutableArray *alternatives;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -43,16 +47,42 @@ static NSString *const kSaatiSegue = @"kSaatiSegue";
 {
   if ([segue.identifier isEqualToString:kSaatiSegue]) {
     SaatiStrategy *strategy = [[SaatiStrategy alloc] init];
-    strategy.alternatives = @[
-            @"В метро",
-            @"На TV",
-            @"На радио",
-            @"В интернете"
-    ];
+    strategy.alternatives = self.alternatives;
 
     SaatiViewController *controller = (SaatiViewController *)segue.destinationViewController;
     controller.strategy = strategy;
   }
+}
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.alternatives = [NSMutableArray arrayWithArray:@[
+                       @"В метро",
+                       @"На TV",
+                       @"На радио",
+                       @"В интернете"]
+                       ];
+}
+
+#pragma mark - UITablewViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAlternativeCell];
+
+  cell.textLabel.text = self.alternatives[indexPath.row];
+  return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return self.alternatives.count;
 }
 
 @end
