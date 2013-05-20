@@ -25,6 +25,9 @@
 
   NSUInteger valueIndex = (NSUInteger)(y / self.heightPerValue);
 
+  // XXX: to be safe from crashes in some edge cases
+  valueIndex = MAX(MIN(valueIndex, self.rankValues.count - 1), 0);
+
   return self.rankValues[valueIndex];
 }
 
