@@ -11,6 +11,7 @@
 static NSString *const kRankSegue = @"kRankSegue";
 
 @interface SaatiViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 @end
 
@@ -27,6 +28,18 @@ static NSString *const kRankSegue = @"kRankSegue";
   [self presentViewController:navigation animated:YES completion:nil];
 }
 
+#pragma mark - Methods
+
+- (void)updateStatusLabel
+{
+  if (self.strategy.canBeCalculated) {
+    self.statusLabel.text = [NSString stringWithFormat:@"Наиболее предпочтительная альтернатива: %@", self.strategy.preferredAlternative];
+  }
+  else {
+    self.statusLabel.text = @"Необходимо дать экспертую оценку всем альтернативам";
+  }
+}
+
 #pragma mark - UIViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -41,6 +54,7 @@ static NSString *const kRankSegue = @"kRankSegue";
 {
   [super viewWillAppear:animated];
   self.debugLabel.text = self.strategy.rankMatrix.stringValue;
+  [self updateStatusLabel];
 }
 
 @end

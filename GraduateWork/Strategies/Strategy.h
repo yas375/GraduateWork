@@ -9,7 +9,11 @@
 @protocol Strategy <NSObject>
 
 @required
-+ (BOOL)isMultiExpert;
 @property (nonatomic, copy) NSArray *alternatives;
+
++ (BOOL)isMultiExpert;
+- (BOOL)canBeCalculated;
+
+- (NSString *)preferredAlternative;
 
 @end

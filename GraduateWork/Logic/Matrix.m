@@ -64,6 +64,21 @@
   return [@"\n" stringByAppendingString:self.stringValue];
 }
 
+- (BOOL)isEqual:(Matrix *)object
+{
+  if (self == object) {
+    return YES;
+  }
+  if ([object isMemberOfClass:self.class] == NO) {
+    return NO;
+  }
+  if (self.size != object.size) {
+    return NO;
+  }
+
+  return [storage isEqualToArray:object->storage];
+}
+
 - (NSArray *)rowAtIndex:(NSUInteger)row
 {
   return [storage[row] copy];

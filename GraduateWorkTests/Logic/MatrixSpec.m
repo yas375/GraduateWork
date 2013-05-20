@@ -63,6 +63,20 @@ SPEC_BEGIN(MatrixSpec)
         [matrix setValue:[Fraction fractionWithNumerator:4] forRow:1 column:1];
         [[theValue(matrix.containsNulls) should] beFalse];
       });
+
+      it(@"equals to the same matrix", ^{
+        Matrix *anotherMatrix = [[Matrix alloc] initWithSize:2];
+        [anotherMatrix setValue:[Fraction fractionWithNumerator:1] forRow:0 column:0];
+        [anotherMatrix setValue:[Fraction fractionWithNumerator:2] forRow:0 column:1];
+        [anotherMatrix setValue:[Fraction fractionWithNumerator:3] forRow:1 column:0];
+        [[matrix should] equal:anotherMatrix];
+      });
+      it(@"doesn't equal to a different matrix", ^{
+        Matrix *anotherMatrix = [[Matrix alloc] initWithSize:2];
+        [anotherMatrix setValue:[Fraction fractionWithNumerator:1] forRow:0 column:0];
+        [anotherMatrix setValue:[Fraction fractionWithNumerator:2] forRow:0 column:1];
+        [[matrix shouldNot] equal:anotherMatrix];
+      });
     });
   });
 SPEC_END
