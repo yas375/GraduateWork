@@ -69,6 +69,15 @@
   return [storage[row] copy];
 }
 
+- (BOOL)containsNulls
+{
+  return [storage any:^BOOL(NSMutableArray *row) {
+    return [row any:^BOOL(id obj) {
+      return [obj isKindOfClass:NSNull.class];
+    }];
+  }];
+}
+
 // TODO: test
 - (void)setSize:(NSInteger)size
 {

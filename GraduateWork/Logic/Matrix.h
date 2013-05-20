@@ -20,4 +20,6 @@
 
 - (NSString *)stringValue;
 
+- (BOOL)containsNulls;
+
 @end

@@ -4,8 +4,8 @@
 
 SPEC_BEGIN(MatrixSpec)
   describe(@"Matrix", ^{
+    __block Matrix *matrix = nil;
     context(@"initialized with size of 3", ^{
-      __block Matrix *matrix = nil;
       beforeEach(^{
         matrix = [[Matrix alloc] initWithSize:3];
       });
@@ -46,6 +46,22 @@ SPEC_BEGIN(MatrixSpec)
                 [NSNull null],
                 [Fraction fractionWithNumerator:14]
         ]];
+      });
+    });
+
+    context(@"almost filled in with values matrix", ^{
+      beforeEach(^{
+        matrix = [[Matrix alloc] initWithSize:2];
+        [matrix setValue:[Fraction fractionWithNumerator:1] forRow:0 column:0];
+        [matrix setValue:[Fraction fractionWithNumerator:2] forRow:0 column:1];
+        [matrix setValue:[Fraction fractionWithNumerator:3] forRow:1 column:0];
+      });
+      it(@"returns YES to containsNulls", ^{
+        [[theValue(matrix.containsNulls) should] beTrue];
+      });
+      it(@"returns NO to containsNulls when it is filled in", ^{
+        [matrix setValue:[Fraction fractionWithNumerator:4] forRow:1 column:1];
+        [[theValue(matrix.containsNulls) should] beFalse];
       });
     });
   });
