@@ -42,7 +42,6 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{20, 20}, {261, 435}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="952246735"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -59,7 +58,6 @@
 								<int key="NSvFlags">1325</int>
 								<string key="NSFrame">{{234, 294}, {237, 76}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="948659440"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -100,7 +98,6 @@
 								<int key="NSvFlags">1313</int>
 								<string key="NSFrame">{{534, 20}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="614595186"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -132,7 +129,6 @@
 								<int key="NSvFlags">1289</int>
 								<string key="NSFrame">{{534, 623}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -157,7 +153,6 @@
 								<int key="NSvFlags">1289</int>
 								<string key="NSFrame">{{534, 405}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="501204227"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -182,7 +177,6 @@
 								<int key="NSvFlags">1313</int>
 								<string key="NSFrame">{{534, 231}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="449856517"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -203,7 +197,6 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{300, 20}, {704, 664}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="31491618"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -217,10 +210,9 @@
 						<int key="NSvFlags">1292</int>
 						<string key="NSFrame">{{20, 463}, {261, 221}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="428934103"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
+						<object class="NSColor" key="IBUIBackgroundColor" id="572276561">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 						</object>
@@ -251,15 +243,8 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{1024, 748}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="190355173"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
-				</object>
+				<reference key="IBUIBackgroundColor" ref="572276561"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">3</int>
 					<int key="interfaceOrientation">3</int>
@@ -419,56 +404,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">28</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">SaatiRankAreaView</string>
-					<string key="superclassName">UIView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">baseAlternativeLabel</string>
-						<string key="NS.object.0">UILabel</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">baseAlternativeLabel</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">baseAlternativeLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SaatiRankAreaView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SaatiRankViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="debugLabel">UILabel</string>
-						<string key="rankArea">SaatiRankAreaView</string>
-						<string key="waitContainer">UIView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="debugLabel">
-							<string key="name">debugLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="rankArea">
-							<string key="name">rankArea</string>
-							<string key="candidateClassName">SaatiRankAreaView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="waitContainer">
-							<string key="name">waitContainer</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SaatiRankViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
