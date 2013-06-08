@@ -56,6 +56,7 @@ static NSString *const kRankSegue = @"kRankSegue";
     self.orderedAlternatives = nil;
     [self setStatusText:@"Необходимо дать экспертую оценку всем альтернативам"];
   }
+  [self.finalAlternativesTableView reloadData];
 }
 
 #pragma mark - UITablewViewDataSource

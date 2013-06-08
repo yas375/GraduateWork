@@ -74,12 +74,12 @@ static const CGFloat kAlternativeSpacer = 5.0f;
         }
       }
       else {
-        [self.rankArea addSubview:view];
         // set position
         CGPoint center;
-        center.x = (self.rankArea.bounds.size.width + view.frame.size.width) / 2;
+        center.x = self.rankArea.bounds.size.width / 2;
         center.y = [self.rankArea yForFraction:rank];
         view.center = center;
+        [self.rankArea addSubview:view];
       }
     }
   }
@@ -91,6 +91,7 @@ static const CGFloat kAlternativeSpacer = 5.0f;
 - (void)updateDebugInfo
 {
   self.debugLabel.text = self.delegate.matrix.stringValue;
+  NSLog(@"\n%@", self.delegate.matrix.stringValue);
 }
 
 #pragma mark - DroppableAlternativeViewDelegate

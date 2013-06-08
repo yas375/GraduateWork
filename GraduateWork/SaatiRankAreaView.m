@@ -19,14 +19,12 @@
 
 - (Fraction *)fractionForY:(CGFloat)y
 {
+  NSAssert((y >= 0 && y <= self.bounds.size.height), @"y is ouside the bounds");
   if (y == self.bounds.size.height) {
     return self.rankValues.lastObject;
   }
 
   NSUInteger valueIndex = (NSUInteger)(y / self.heightPerValue);
-
-  // XXX: to be safe from crashes in some edge cases
-  valueIndex = MAX(MIN(valueIndex, self.rankValues.count - 1), 0);
 
   return self.rankValues[valueIndex];
 }
@@ -37,18 +35,19 @@
   if (maxRank != _maxRank) {
     _maxRank = maxRank;
     NSMutableArray *values = [NSMutableArray array];
-    // 3, 2
+    // 1/3, 1/2
     for (int i = maxRank; i > 1; i--) {
-      [values addObject:[Fraction fractionWithNumerator:i]];
+      [values addObject:[Fraction fractionWithNumerator:1 denominator:i]];
     }
     // 1
     [values insertObject:[Fraction fractionWithNumerator:1] atIndex:(maxRank - 1)];
-    // 1/2, 1/3
+    // 2, 3
     for (int i = 2; i <= maxRank; i++) {
-      [values addObject:[Fraction fractionWithNumerator:1 denominator:i]];
+      [values addObject:[Fraction fractionWithNumerator:i]];
     }
     self.rankValues = [values copy];
   }
+  NSLog(@"ranks: %@", self.rankValues);
 }
 
 - (CGFloat)yForFraction:(Fraction *)fraction

@@ -47,6 +47,7 @@ describe(@"SaatiStrategy", ^{
       [saati.rankMatrix setValue:[Fraction fractionWithNumerator:3] forRow:1 column:3];
 
       [saati.rankMatrix setValue:[Fraction fractionWithNumerator:5] forRow:2 column:3];
+      NSLog(@"\n%@", saati.rankMatrix);
     });
     it(@"is valid", ^{
       [[theValue(saati.isValid) should] beTrue];

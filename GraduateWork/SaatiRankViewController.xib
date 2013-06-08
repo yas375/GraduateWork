@@ -37,10 +37,10 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="190355173">
 						<reference key="NSNextResponder" ref="32266945"/>
-						<int key="NSvFlags">1300</int>
+						<int key="NSvFlags">1316</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{20, 20}, {261, 664}}</string>
+						<string key="NSFrame">{{20, 20}, {261, 578}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="952246735"/>
@@ -52,15 +52,15 @@
 					</object>
 					<object class="IBUIView" id="428934103">
 						<reference key="NSNextResponder" ref="32266945"/>
-						<int key="NSvFlags">1298</int>
+						<int key="NSvFlags">1282</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUILabel" id="449856517">
 								<reference key="NSNextResponder" ref="428934103"/>
 								<int key="NSvFlags">1325</int>
-								<string key="NSFrame">{{234, 294}, {237, 76}}</string>
+								<string key="NSFrame">{{234, 251}, {237, 76}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="948659440"/>
+								<reference key="NSNextKeyView" ref="614595186"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -100,7 +100,7 @@
 								<string key="NSFrame">{{534, 20}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="614595186"/>
+								<reference key="NSNextKeyView" ref="449856517"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -129,9 +129,10 @@
 							<object class="IBUILabel" id="501204227">
 								<reference key="NSNextResponder" ref="428934103"/>
 								<int key="NSvFlags">1289</int>
-								<string key="NSFrame">{{534, 623}, {150, 21}}</string>
+								<string key="NSFrame">{{534, 537}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -153,7 +154,7 @@
 							<object class="IBUILabel" id="948659440">
 								<reference key="NSNextResponder" ref="428934103"/>
 								<int key="NSvFlags">1289</int>
-								<string key="NSFrame">{{534, 405}, {150, 21}}</string>
+								<string key="NSFrame">{{534, 319}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="501204227"/>
@@ -181,7 +182,7 @@
 								<string key="NSFrame">{{534, 231}, {150, 21}}</string>
 								<reference key="NSSuperview" ref="428934103"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="449856517"/>
+								<reference key="NSNextKeyView" ref="948659440"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -199,7 +200,7 @@
 							</object>
 						</array>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{300, 20}, {704, 664}}</string>
+						<string key="NSFrame">{{300, 20}, {704, 578}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="31491618"/>
@@ -213,7 +214,7 @@
 					<object class="IBUILabel" id="952246735">
 						<reference key="NSNextResponder" ref="32266945"/>
 						<int key="NSvFlags">-2147482356</int>
-						<string key="NSFrame">{{20, 463}, {261, 221}}</string>
+						<string key="NSFrame">{{20, 377}, {261, 221}}</string>
 						<reference key="NSSuperview" ref="32266945"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="428934103"/>
@@ -332,9 +333,9 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="32266945"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="190355173"/>
 							<reference ref="428934103"/>
 							<reference ref="952246735"/>
+							<reference ref="190355173"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
