@@ -25,9 +25,10 @@
       frame.origin = CGPointZero;
       self.label = [[UILabel alloc] initWithFrame:frame];
       self.label.layer.cornerRadius = 7;
-      self.label.layer.borderColor = [UIColor darkGrayColor].CGColor;
+      self.label.layer.borderColor = [UIColor colorWithRed:216.0/255.0 green:216.0/255.0 blue:214.0/255.0 alpha:1.0].CGColor;
       self.label.layer.borderWidth = 2;
-      self.label.backgroundColor = [UIColor cyanColor];
+      self.label.backgroundColor = [UIColor colorWithRed:118.0/255.0 green:112.0/255.0 blue:76.0/255.0 alpha:1.0];
+      self.label.textColor = [UIColor colorWithRed:216.0/255.0 green:216.0/255.0 blue:214.0/255.0 alpha:1.0];
       self.label.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
       self.label.textAlignment = NSTextAlignmentCenter;
       self.label.numberOfLines = 0;

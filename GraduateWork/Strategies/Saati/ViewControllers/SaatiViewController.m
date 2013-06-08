@@ -8,11 +8,18 @@
 #import "SaatiRankingPageViewController.h"
 #import "SaatiRankViewController.h"
 
+static NSString *const kAlternativeCell = @"kAlternativeCell";
 static NSString *const kRankSegue = @"kRankSegue";
 
 @interface SaatiViewController ()
+<UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *initialAlternativesTableView;
+@property (weak, nonatomic) IBOutlet UITableView *finalAlternativesTableView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *debugLabel;
+
+@property (strong, nonatomic) NSArray *orderedAlternatives;
+
 @end
 
 @implementation SaatiViewController
@@ -38,13 +45,47 @@ static NSString *const kRankSegue = @"kRankSegue";
 - (void)updateStatusLabel
 {
   if (self.strategy.isValid) {
-    [self setStatusText:[NSString stringWithFormat:@"Альтернативы в порядке убывания предпочтительности: %@", [self.strategy.orderedAlternatives componentsJoinedByString:@", "]]];
+    self.orderedAlternatives = self.strategy.orderedAlternatives;
+    [self setStatusText:@"Решение найдено"];
   }
   else if (self.strategy.hasAllRanks) {
+    self.orderedAlternatives = nil;
     [self setStatusText:@"Пожалуйста, уточните оценки. Имеются противоречащие друг другу оценки."];
   }
   else {
+    self.orderedAlternatives = nil;
     [self setStatusText:@"Необходимо дать экспертую оценку всем альтернативам"];
+  }
+}
+
+#pragma mark - UITablewViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAlternativeCell];
+
+  if (tableView == self.finalAlternativesTableView) {
+    cell.textLabel.text = self.orderedAlternatives[indexPath.row];
+  }
+  else {
+    cell.textLabel.text = self.strategy.alternatives[indexPath.row];
+  }
+
+  return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  if (tableView == self.finalAlternativesTableView) {
+    return self.orderedAlternatives.count;
+  }
+  else {
+    return self.strategy.alternatives.count;
   }
 }
 
