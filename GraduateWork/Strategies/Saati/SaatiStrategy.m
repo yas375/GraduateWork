@@ -7,60 +7,10 @@
 
 
 #import "SaatiStrategy.h"
-#import "KWBlock.h"
-
 
 @implementation SaatiStrategy
 
-#pragma mark - Strategy
-
-@synthesize alternatives = _alternatives;
-
-- (BOOL)hasAllRanks
-{
-  return (self.rankMatrix.containsNulls == NO);
-}
-
-+ (BOOL)isMultiExpert
-{
-  return NO;
-}
-
-- (BOOL)isValid
-{
-  if (self.hasAllRanks == NO) {
-    return NO;
-  }
-
-  NSUInteger size = self.alternatives.count;
-  // 1. Находятся суммы столбцов матрицы парных сравнений
-  NSMutableArray *sums = [NSMutableArray arrayWithCapacity:size];
-  for (int column = 0; column < size; column++) {
-    double sum = 0.0;
-    for (int row = 0; row < size; row++) {
-      sum += [[self.rankMatrix valueForRow:row column:column] doubleValue];
-    }
-    [sums addObject:@(sum)];
-    NSLog(@"Сумма столбца %d: %f", column, sum);
-  }
-  // 2. Рассчитывается вспомогательная величина λ путем суммирования произведений сумм столбцов матрицы на веса альтернатив:
-  NSArray *prices = [self alternativeWeights];
-  double lambda = 0.0;
-  for (int i = 0; i < size; i++) {
-    lambda += [sums[i] doubleValue] * [prices[i] doubleValue];
-  }
-  NSLog(@"λ = %f", lambda);
-  // 3. Находится величина, называемая индексом согласованности (ИС):
-  double conformityIndex = (lambda - size)/(size - 1);
-  NSLog(@"Индекс согласованности: %f", conformityIndex);
-  // 4. В зависимости от размерности матрицы парных сравнений находится величина случайной согласованности (СлС).
-  double conformityValue = [self conformityValue];
-  NSLog(@"Величина случайной согласованности: %f", conformityValue);
-  double conformityRatio = conformityIndex / conformityValue;
-  NSLog(@"Отношение согласованности: %f", conformityRatio);
-
-  return (conformityRatio <= 0.2);
-}
+#pragma mark - Methods
 
 - (NSArray *)alternativeWeights
 {
@@ -104,13 +54,78 @@
   static NSDictionary *values = nil;
   if (values == nil) {
     values = @{
-            @3 : @(0.58), @4 : @(0.9),
-            @5 : @(1.12), @6 : @(1.24),
-            @7 : @(1.32), @8 : @(1.41),
-            @9 : @(1.45), @10 : @(1.49)
-    };
+               @3 : @(0.58), @4 : @(0.9),
+               @5 : @(1.12), @6 : @(1.24),
+               @7 : @(1.32), @8 : @(1.41),
+               @9 : @(1.45), @10 : @(1.49)
+               };
   }
   return [values[@(self.alternativeWeights.count)] doubleValue];
+}
+
+#pragma mark - Strategy
+
+@synthesize alternatives = _alternatives;
+
++ (NSUInteger)minimumNumberOfAlternatives
+{
+  return 3;
+}
+
++ (NSUInteger)maximumNumberOfAlternatives
+{
+  return 5;
+}
+
++ (NSUInteger)minimumNumberOfExperts
+{
+  return 1;
+}
+
++ (NSUInteger)maximumNumberOfExperts
+{
+  return 1;
+}
+
+- (BOOL)hasAllRanks
+{
+  return (self.rankMatrix.containsNulls == NO);
+}
+
+- (BOOL)isValid
+{
+  if (self.hasAllRanks == NO) {
+    return NO;
+  }
+
+  NSUInteger size = self.alternatives.count;
+  // 1. Находятся суммы столбцов матрицы парных сравнений
+  NSMutableArray *sums = [NSMutableArray arrayWithCapacity:size];
+  for (int column = 0; column < size; column++) {
+    double sum = 0.0;
+    for (int row = 0; row < size; row++) {
+      sum += [[self.rankMatrix valueForRow:row column:column] doubleValue];
+    }
+    [sums addObject:@(sum)];
+    NSLog(@"Сумма столбца %d: %f", column, sum);
+  }
+  // 2. Рассчитывается вспомогательная величина λ путем суммирования произведений сумм столбцов матрицы на веса альтернатив:
+  NSArray *prices = [self alternativeWeights];
+  double lambda = 0.0;
+  for (int i = 0; i < size; i++) {
+    lambda += [sums[i] doubleValue] * [prices[i] doubleValue];
+  }
+  NSLog(@"λ = %f", lambda);
+  // 3. Находится величина, называемая индексом согласованности (ИС):
+  double conformityIndex = (lambda - size)/(size - 1);
+  NSLog(@"Индекс согласованности: %f", conformityIndex);
+  // 4. В зависимости от размерности матрицы парных сравнений находится величина случайной согласованности (СлС).
+  double conformityValue = [self conformityValue];
+  NSLog(@"Величина случайной согласованности: %f", conformityValue);
+  double conformityRatio = conformityIndex / conformityValue;
+  NSLog(@"Отношение согласованности: %f", conformityRatio);
+
+  return (conformityRatio <= 0.2);
 }
 
 - (NSArray *)orderedAlternatives

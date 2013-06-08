@@ -58,10 +58,10 @@ static NSString *const kAlternativeCell = @"kAlternativeCell";
 {
   [super viewDidLoad];
   self.alternatives = [NSMutableArray arrayWithArray:@[
-                       @"В метро",
-                       @"На TV",
-                       @"На радио",
-                       @"В интернете"]
+                       @"TV",
+                       @"Radio",
+                       @"Newspaper",
+                       @"Stand"]
                        ];
 }
 

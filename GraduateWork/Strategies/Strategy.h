@@ -11,10 +11,13 @@
 @required
 @property (nonatomic, copy) NSArray *alternatives;
 
-+ (BOOL)isMultiExpert;
++ (NSUInteger)minimumNumberOfAlternatives;
++ (NSUInteger)maximumNumberOfAlternatives;
++ (NSUInteger)minimumNumberOfExperts;
++ (NSUInteger)maximumNumberOfExperts;
+
 - (BOOL)hasAllRanks;
 - (BOOL)isValid;
-
 
 - (NSArray *)orderedAlternatives;
 
