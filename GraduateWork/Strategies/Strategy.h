@@ -13,8 +13,6 @@
 
 + (NSUInteger)minimumNumberOfAlternatives;
 + (NSUInteger)maximumNumberOfAlternatives;
-+ (NSUInteger)minimumNumberOfExperts;
-+ (NSUInteger)maximumNumberOfExperts;
 
 - (BOOL)hasAllRanks;
 - (BOOL)isValid;

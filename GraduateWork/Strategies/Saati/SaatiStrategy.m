@@ -77,16 +77,6 @@
   return 5;
 }
 
-+ (NSUInteger)minimumNumberOfExperts
-{
-  return 1;
-}
-
-+ (NSUInteger)maximumNumberOfExperts
-{
-  return 1;
-}
-
 - (BOOL)hasAllRanks
 {
   return (self.rankMatrix.containsNulls == NO);
