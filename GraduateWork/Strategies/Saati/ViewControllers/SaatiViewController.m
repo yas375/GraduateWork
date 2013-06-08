@@ -30,13 +30,21 @@ static NSString *const kRankSegue = @"kRankSegue";
 
 #pragma mark - Methods
 
+- (void)setStatusText:(NSString *)text
+{
+  self.statusLabel.text = text;
+}
+
 - (void)updateStatusLabel
 {
-  if (self.strategy.canBeCalculated) {
-    self.statusLabel.text = [NSString stringWithFormat:@"Наиболее предпочтительная альтернатива: %@", self.strategy.preferredAlternative];
+  if (self.strategy.isValid) {
+    [self setStatusText:[NSString stringWithFormat:@"Альтернативы в порядке убывания предпочтительности: %@", [self.strategy.orderedAlternatives componentsJoinedByString:@", "]]];
+  }
+  else if (self.strategy.hasAllRanks) {
+    [self setStatusText:@"Пожалуйста, уточните оценки. Имеются противоречащие друг другу оценки."];
   }
   else {
-    self.statusLabel.text = @"Необходимо дать экспертую оценку всем альтернативам";
+    [self setStatusText:@"Необходимо дать экспертую оценку всем альтернативам"];
   }
 }
 

@@ -7,6 +7,7 @@
 
 
 #import "SaatiStrategy.h"
+#import "KWBlock.h"
 
 
 @implementation SaatiStrategy
@@ -15,7 +16,7 @@
 
 @synthesize alternatives = _alternatives;
 
-- (BOOL)canBeCalculated
+- (BOOL)hasAllRanks
 {
   return (self.rankMatrix.containsNulls == NO);
 }
@@ -25,16 +26,51 @@
   return NO;
 }
 
-- (NSString *)preferredAlternative
+- (BOOL)isValid
 {
-  if (self.canBeCalculated == NO) {
-    return nil;
+  if (self.hasAllRanks == NO) {
+    return NO;
   }
 
   NSUInteger size = self.alternatives.count;
+  // 1. Находятся суммы столбцов матрицы парных сравнений
+  NSMutableArray *sums = [NSMutableArray arrayWithCapacity:size];
+  for (int column = 0; column < size; column++) {
+    double sum = 0.0;
+    for (int row = 0; row < size; row++) {
+      sum += [[self.rankMatrix valueForRow:row column:column] doubleValue];
+    }
+    [sums addObject:@(sum)];
+    NSLog(@"Сумма столбца %d: %f", column, sum);
+  }
+  // 2. Рассчитывается вспомогательная величина λ путем суммирования произведений сумм столбцов матрицы на веса альтернатив:
+  NSArray *prices = [self alternativeWeights];
+  double lambda = 0.0;
+  for (int i = 0; i < size; i++) {
+    lambda += [sums[i] doubleValue] * [prices[i] doubleValue];
+  }
+  NSLog(@"λ = %f", lambda);
+  // 3. Находится величина, называемая индексом согласованности (ИС):
+  double conformityIndex = (lambda - size)/(size - 1);
+  NSLog(@"Индекс согласованности: %f", conformityIndex);
+  // 4. В зависимости от размерности матрицы парных сравнений находится величина случайной согласованности (СлС).
+  double conformityValue = [self conformityValue];
+  NSLog(@"Величина случайной согласованности: %f", conformityValue);
+  double conformityRatio = conformityIndex / conformityValue;
+  NSLog(@"Отношение согласованности: %f", conformityRatio);
+
+  return (conformityRatio <= 0.2);
+}
+
+- (NSArray *)alternativeWeights
+{
+  if (self.hasAllRanks == NO) {
+    return nil;
+  }
+  NSUInteger size = self.alternatives.count;
   // Находятся цены альтернатив - средние геометрические строк матрицы, т.е. элементы строки перемножаются, и из
   // их произведения извлекается корень N-й степени.
-  NSMutableArray *prices = [NSMutableArray array];
+  NSMutableArray *prices = [NSMutableArray arrayWithCapacity:size];
   for (int i = 0; i < size; i++) {
     NSArray *row = [self.rankMatrix rowAtIndex:i];
     double proizvedenie = 1.0;
@@ -44,7 +80,6 @@
     double c = pow(proizvedenie, 1.0 / size);
     [prices addObject:@(c)];
     NSLog(@"Цена альтернативы %d: %f", i, c);
-
   }
 
   // Находится сумма цен альтернатив:
@@ -55,18 +90,42 @@
   NSLog(@"Сумма цен альтернатив: %f", summaCenAlternative);
 
   // Находятся веса альтернатив
-  // Наиболее предпочтительной, по мнению эксперта, является альтернатива, имеющая максимальный вес.
-  NSUInteger indexOfPreferredAlternative = 0;
-  double maxWeight = 0.0;
+  NSMutableArray *weights = [NSMutableArray arrayWithCapacity:size];
   for (int i = 0; i < size; i++) {
-    double weigth = [prices[i] doubleValue] / summaCenAlternative;
-    NSLog(@"Вес альтернативы %d: %f", i, weigth);
-    if (weigth > maxWeight) {
-      maxWeight = weigth;
-      indexOfPreferredAlternative = i;
-    }
+    double weight = [prices[i] doubleValue] / summaCenAlternative;
+    NSLog(@"Вес альтернативы %d: %f", i, weight);
+    [weights addObject:@(weight)];
   }
-  return self.alternatives[indexOfPreferredAlternative];
+  return [weights copy];
+}
+
+- (double)conformityValue
+{
+  static NSDictionary *values = nil;
+  if (values == nil) {
+    values = @{
+            @3 : @(0.58), @4 : @(0.9),
+            @5 : @(1.12), @6 : @(1.24),
+            @7 : @(1.32), @8 : @(1.41),
+            @9 : @(1.45), @10 : @(1.49)
+    };
+  }
+  return [values[@(self.alternativeWeights.count)] doubleValue];
+}
+
+- (NSArray *)orderedAlternatives
+{
+  if (self.isValid == NO) {
+    return nil;
+  }
+
+  NSArray *weights = [self alternativeWeights];
+  // put weights and alternatives into one dictionary
+  NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+  for (int i = 0; i < self.alternatives.count; i++) {
+    dict[self.alternatives[i]] = weights[i];
+  }
+  return [[[dict keysSortedByValueUsingSelector:@selector(compare:)] reverseObjectEnumerator] allObjects];
 }
 
 - (void)setAlternatives:(NSArray *)alternatives

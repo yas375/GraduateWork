@@ -12,7 +12,7 @@ SPEC_BEGIN(MatrixSpec)
       it(@"has size of 3", ^{
         [[theValue(matrix.size) should] equal:theValue(3)];
       });
-      context(@"set value 3 to row 2 column 1", ^{
+      context(@"sets value 3 to row 2 column 1", ^{
         beforeEach(^{
           [matrix setValue:[Fraction fractionWithNumerator:3] forRow:2 column:1];
         });

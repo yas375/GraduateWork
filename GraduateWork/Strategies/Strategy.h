@@ -12,8 +12,10 @@
 @property (nonatomic, copy) NSArray *alternatives;
 
 + (BOOL)isMultiExpert;
-- (BOOL)canBeCalculated;
+- (BOOL)hasAllRanks;
+- (BOOL)isValid;
 
-- (NSString *)preferredAlternative;
+
+- (NSArray *)orderedAlternatives;
 
 @end

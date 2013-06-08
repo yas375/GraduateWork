@@ -22,8 +22,8 @@ describe(@"SaatiStrategy", ^{
     [[saati.rankMatrix should] equal:emptyMatrix];
   });
 
-  it(@"can't be calculated", ^{
-    [[theValue(saati.canBeCalculated) should] beFalse];
+  it(@"hasn't all ranks", ^{
+    [[theValue(saati.hasAllRanks) should] beFalse];
   });
 
   context(@"partly ranked", ^{
@@ -33,8 +33,8 @@ describe(@"SaatiStrategy", ^{
       [saati.rankMatrix setValue:[Fraction fractionWithNumerator:1 denominator:5] forRow:1 column:2];
     });
 
-    it(@"can't be calculated", ^{
-      [[theValue(saati.canBeCalculated) should] beFalse];
+    it(@"hasn't all ranks", ^{
+      [[theValue(saati.hasAllRanks) should] beFalse];
     });
   });
   context(@"completely ranked", ^{
@@ -48,11 +48,36 @@ describe(@"SaatiStrategy", ^{
 
       [saati.rankMatrix setValue:[Fraction fractionWithNumerator:5] forRow:2 column:3];
     });
-    it(@"can be calculated", ^{
-      [[theValue(saati.canBeCalculated) should] beTrue];
+    it(@"is valid", ^{
+      [[theValue(saati.isValid) should] beTrue];
     });
-    it(@"returns TV as the most preferable alternative", ^{
-      [[saati.preferredAlternative should] equal:@"TV"];
+    it(@"has all ranks", ^{
+      [[theValue(saati.hasAllRanks) should] beTrue];
+    });
+    it(@"returns alternatives in correct order: the most preferrable alternative goes first", ^{
+      [[saati.orderedAlternatives should] equal:@[@"TV", @"Newspaper", @"Radio", @"Stand"]];
+    });
+  });
+  context(@"filled in with conflicted ranks", ^{
+    beforeEach(^{
+      // CONFLICTED RANKS:
+      // 1st is worse than 2nd
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:1 denominator:5] forRow:0 column:1];
+      // 2nd is worse than 3rd
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:1 denominator:5] forRow:1 column:2];
+      // 1st is better than 3rd
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:5] forRow:0 column:2];
+
+      // OTHER RANKS:
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:9] forRow:0 column:3];
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:3] forRow:1 column:3];
+      [saati.rankMatrix setValue:[Fraction fractionWithNumerator:5] forRow:2 column:3];
+    });
+    it(@"has all ranks", ^{
+      [[theValue(saati.hasAllRanks) should] beTrue];
+    });
+    it(@"is not valid", ^{
+      [[theValue(saati.isValid) should] beFalse];
     });
   });
 });
