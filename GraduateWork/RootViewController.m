@@ -1,19 +1,19 @@
 //
-//  VIDetailViewController.m
+//  RootViewController.m
 //  GraduateWork
 //
 //  Created by Victor Ilyukevich on 02.02.13.
 //  Copyright (c) 2013 Victor Ilyukevich. All rights reserved.
 //
 
-#import "VIDetailViewController.h"
+#import "RootViewController.h"
 #import "SaatiViewController.h"
 #import "SaatiStrategy.h"
 
 static NSString *const kSaatiSegue = @"kSaatiSegue";
 static NSString *const kAlternativeCell = @"kAlternativeCell";
 
-@interface VIDetailViewController ()
+@interface RootViewController ()
 <UITableViewDataSource>
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -23,7 +23,7 @@ static NSString *const kAlternativeCell = @"kAlternativeCell";
 @end
 
 
-@implementation VIDetailViewController
+@implementation RootViewController
 
 #pragma mark - Split view
 

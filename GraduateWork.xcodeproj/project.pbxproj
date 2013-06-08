@@ -31,7 +31,7 @@
 		5023D33A16BCFBAB007699AA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33916BCFBAB007699AA /* Default@2x.png */; };
 		5023D33C16BCFBAB007699AA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33B16BCFBAB007699AA /* Default-568h@2x.png */; };
 		5023D33F16BCFBAB007699AA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5023D33D16BCFBAB007699AA /* MainStoryboard.storyboard */; };
-		5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D34416BCFBAB007699AA /* VIDetailViewController.m */; };
+		5023D34516BCFBAB007699AA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5023D34416BCFBAB007699AA /* RootViewController.m */; };
 		5023D34D16BCFBAB007699AA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D34C16BCFBAB007699AA /* SenTestingKit.framework */; };
 		5023D34E16BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
@@ -90,8 +90,8 @@
 		5023D33916BCFBAB007699AA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5023D33B16BCFBAB007699AA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5023D33E16BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5023D34316BCFBAB007699AA /* VIDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDetailViewController.h; sourceTree = "<group>"; };
-		5023D34416BCFBAB007699AA /* VIDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIDetailViewController.m; sourceTree = "<group>"; };
+		5023D34316BCFBAB007699AA /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5023D34416BCFBAB007699AA /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5023D34B16BCFBAB007699AA /* GraduateWorkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraduateWorkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5023D34C16BCFBAB007699AA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5023D35416BCFBAB007699AA /* GraduateWorkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraduateWorkTests-Info.plist"; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		5000B8ED174924400037C323 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				5023D34316BCFBAB007699AA /* VIDetailViewController.h */,
-				5023D34416BCFBAB007699AA /* VIDetailViewController.m */,
+				5023D34316BCFBAB007699AA /* RootViewController.h */,
+				5023D34416BCFBAB007699AA /* RootViewController.m */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 			files = (
 				5023D33216BCFBAB007699AA /* main.m in Sources */,
 				5023D33616BCFBAB007699AA /* VIAppDelegate.m in Sources */,
-				5023D34516BCFBAB007699AA /* VIDetailViewController.m in Sources */,
+				5023D34516BCFBAB007699AA /* RootViewController.m in Sources */,
 				1D26BFDCBCC4E5C7C233DDB1 /* SaatiMatrix.m in Sources */,
 				1D26B457D3E9DEC51EC73459 /* Matrix.m in Sources */,
 				1D26BCCF1E3B8C15C5A646E2 /* Fraction.m in Sources */,

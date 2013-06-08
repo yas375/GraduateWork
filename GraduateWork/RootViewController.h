@@ -1,5 +1,5 @@
 //
-//  VIDetailViewController.h
+//  RootViewController.h
 //  GraduateWork
 //
 //  Created by Victor Ilyukevich on 02.02.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VIDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface RootViewController : UIViewController <UISplitViewControllerDelegate>
 
 @end
