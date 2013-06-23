@@ -221,13 +221,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		5000B8ED174924400037C323 /* Viewcontrollers */ = {
+		5000B8ED174924400037C323 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				5023D34316BCFBAB007699AA /* RootViewController.h */,
 				5023D34416BCFBAB007699AA /* RootViewController.m */,
 			);
-			name = Viewcontrollers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5023D31916BCFBAB007699AA = {
@@ -274,7 +274,7 @@
 				5023D32C16BCFBAB007699AA /* Supporting Files */,
 				5023D33416BCFBAB007699AA /* VIAppDelegate.h */,
 				5023D33516BCFBAB007699AA /* VIAppDelegate.m */,
-				5000B8ED174924400037C323 /* Viewcontrollers */,
+				5000B8ED174924400037C323 /* ViewControllers */,
 			);
 			path = GraduateWork;
 			sourceTree = "<group>";

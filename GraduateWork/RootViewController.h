@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController <UISplitViewControllerDelegate>
+@interface RootViewController : UIViewController
 
 @end

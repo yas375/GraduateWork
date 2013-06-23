@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface Fraction : NSObject
+
 @property(nonatomic) NSUInteger numerator;
 @property(nonatomic) NSUInteger denominator;
 
 + (Fraction *)fractionWithNumerator:(NSUInteger)numerator denominator:(NSUInteger)denominator;
-
-- (id)initWithNumerator:(NSUInteger)numerator denominator:(NSUInteger)denominator;
-
 + (Fraction *)fractionWithNumerator:(NSUInteger)numerator;
 
+- (id)initWithNumerator:(NSUInteger)numerator denominator:(NSUInteger)denominator;
 - (Fraction *)reversedFraction;
-
 - (double)doubleValue;
+
 @end
