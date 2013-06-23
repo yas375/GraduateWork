@@ -36,6 +36,7 @@
 		5023D34E16BCFBAB007699AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32516BCFBAB007699AA /* UIKit.framework */; };
 		5023D34F16BCFBAB007699AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5023D32716BCFBAB007699AA /* Foundation.framework */; };
 		5023D35716BCFBAB007699AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5023D35516BCFBAB007699AA /* InfoPlist.strings */; };
+		50327EE217776F5F00841F79 /* AlternativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50327EE117776F5F00841F79 /* AlternativeViewController.m */; };
 		5063E96E17428106003F62BB /* SaatiRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5063E96D17428106003F62BB /* SaatiRankViewController.m */; };
 		50E5020C17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */; };
 		50E5020E1748D7E300B8F7EF /* SaatiStrategySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5020D1748D7E300B8F7EF /* SaatiStrategySpec.m */; };
@@ -96,6 +97,8 @@
 		5023D34C16BCFBAB007699AA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5023D35416BCFBAB007699AA /* GraduateWorkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraduateWorkTests-Info.plist"; sourceTree = "<group>"; };
 		5023D35616BCFBAB007699AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50327EE017776F5F00841F79 /* AlternativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeViewController.h; sourceTree = "<group>"; };
+		50327EE117776F5F00841F79 /* AlternativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeViewController.m; sourceTree = "<group>"; };
 		5063E96C17428106003F62BB /* SaatiRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaatiRankViewController.h; path = ../../../SaatiRankViewController.h; sourceTree = "<group>"; };
 		5063E96D17428106003F62BB /* SaatiRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiRankViewController.m; path = ../../../SaatiRankViewController.m; sourceTree = "<group>"; };
 		50E5020B17483B2F00B8F7EF /* SaatiRankAreaViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaatiRankAreaViewSpec.m; path = ../../SaatiRankAreaViewSpec.m; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 		5000B8ED174924400037C323 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				50327EE017776F5F00841F79 /* AlternativeViewController.h */,
+				50327EE117776F5F00841F79 /* AlternativeViewController.m */,
 				5023D34316BCFBAB007699AA /* RootViewController.h */,
 				5023D34416BCFBAB007699AA /* RootViewController.m */,
 			);
@@ -496,6 +501,7 @@
 				1D26B9EF568888AAA34350E6 /* SaatiStrategy.m in Sources */,
 				1D26B0F127E53FF35E17BDA4 /* SaatiViewController.m in Sources */,
 				5000B8E41748E0150037C323 /* SaatiRankingPageViewController.m in Sources */,
+				50327EE217776F5F00841F79 /* AlternativeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
