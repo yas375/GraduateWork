@@ -1,6 +1,8 @@
 GraduateWork
 ============
 
+[![Build Status](https://travis-ci.org/yas375/GraduateWork.png?branch=master)](https://travis-ci.org/yas375/GraduateWork)
+
 Here is the code of the application prototype for my graduate work. Text of the work and graphic materials can be found in `doc` folder. The work is written in russian.
 
 * **Subject** *(rus)*: Модуль поддержки принятия решений общего назначения
