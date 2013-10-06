@@ -1,0 +1,5 @@
+[
+  "-workspace", "GraduateWork.xcworkspace",
+  "-scheme", "GraduateWork",
+  "-sdk", "iphonesimulator"
+]

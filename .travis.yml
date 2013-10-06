@@ -1,0 +1,3 @@
+language: objective-c
+install: echo "nothing" # because we don't want to run `pod install` which is default install command
+script: xctool build test

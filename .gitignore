@@ -1,6 +1,7 @@
 # Xcode
 xcuserdata
 /DerivedData
+/build
 
 # Mac OS
 .DS_Store
