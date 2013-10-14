@@ -22,3 +22,7 @@ Code is licensed under [MIT license](http://choosealicense.com/licenses/mit/).
 Text of the work and diagrams/graphic materials are licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/deed.en_US).
 
 [![a](http://i.creativecommons.org/l/by/3.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/deed.en_US)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yas375/graduatework/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
